@@ -40,6 +40,11 @@ namespace BigAds
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BigAds.Frm.WaitForm1), true, true);
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ArVaccine = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Arbsy = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ArPatient = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ArGroupPatient = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -67,7 +72,8 @@ namespace BigAds
             this.accordionControl1.Appearance.AccordionControl.Options.UseForeColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.Element1});
+            this.Element1,
+            this.accordionControlElement2});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
             this.accordionControl1.Name = "accordionControl1";
@@ -136,6 +142,45 @@ namespace BigAds
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ArVaccine,
+            this.Arbsy,
+            this.ArPatient,
+            this.ArGroupPatient});
+            this.accordionControlElement2.Expanded = true;
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Text = "Danh mục";
+            // 
+            // ArVaccine
+            // 
+            this.ArVaccine.Name = "ArVaccine";
+            this.ArVaccine.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ArVaccine.Text = "Vaccine";
+            this.ArVaccine.Click += new System.EventHandler(this.ArVaccine_Click);
+            // 
+            // Arbsy
+            // 
+            this.Arbsy.Name = "Arbsy";
+            this.Arbsy.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Arbsy.Text = "Doctor";
+            this.Arbsy.Click += new System.EventHandler(this.Arbsy_Click);
+            // 
+            // ArPatient
+            // 
+            this.ArPatient.Name = "ArPatient";
+            this.ArPatient.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ArPatient.Text = "Patient";
+            this.ArPatient.Click += new System.EventHandler(this.ArPatient_Click);
+            // 
+            // ArGroupPatient
+            // 
+            this.ArGroupPatient.Name = "ArGroupPatient";
+            this.ArGroupPatient.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ArGroupPatient.Text = "Group Patient";
+            this.ArGroupPatient.Click += new System.EventHandler(this.ArGroupPatient_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +217,11 @@ namespace BigAds
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ArVaccine;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Arbsy;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ArPatient;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ArGroupPatient;
     }
 }
 

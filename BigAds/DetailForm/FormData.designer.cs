@@ -1,7 +1,7 @@
 ﻿
 namespace BigAds.FormDetail
 {
-    partial class FormContent
+    partial class FormData
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,16 @@ namespace BigAds.FormDetail
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContent));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BigAds.Frm.WaitForm1), true, true);
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnExit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -63,11 +64,11 @@ namespace BigAds.FormDetail
             this.btnSave.ColorContrastOnClick = 45;
             this.btnSave.ColorContrastOnHover = 45;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnSave.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnSave.CustomizableEdges = borderEdges3;
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSave.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -152,11 +153,11 @@ namespace BigAds.FormDetail
             this.btnExit.ColorContrastOnClick = 45;
             this.btnExit.ColorContrastOnHover = 45;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnExit.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnExit.CustomizableEdges = borderEdges4;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExit.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -221,6 +222,7 @@ namespace BigAds.FormDetail
             this.btnExit.TextMarginLeft = 0;
             this.btnExit.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnExit.UseDefaultRadiusAndThickness = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // button2
             // 
@@ -233,6 +235,7 @@ namespace BigAds.FormDetail
             this.button2.Size = new System.Drawing.Size(30, 23);
             this.button2.TabIndex = 122;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -245,6 +248,7 @@ namespace BigAds.FormDetail
             this.button1.Size = new System.Drawing.Size(31, 23);
             this.button1.TabIndex = 121;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bunifuFormDock1
             // 
@@ -286,20 +290,31 @@ namespace BigAds.FormDetail
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // FormContent
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(546, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 123;
+            this.label1.Text = "Data";
+            // 
+            // FormData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 722);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormContent";
+            this.Name = "FormData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormContent";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -310,5 +325,6 @@ namespace BigAds.FormDetail
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private System.Windows.Forms.Label label1;
     }
 }

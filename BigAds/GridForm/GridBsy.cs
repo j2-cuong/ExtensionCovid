@@ -1,32 +1,28 @@
 ﻿using BigAds.FormDetail;
 using BigAds.Services;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace BigAds.Frm
 {
-    public partial class GridContent : DevExpress.XtraEditors.XtraUserControl
+    public partial class GridBsy : DevExpress.XtraEditors.XtraUserControl
     {
-        private static GridContent _instance;
-        private string Conn = Properties.Settings.Default.ConnectionString;
-
-        public GridContent()
+        SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
+        private static GridBsy _instance;
+        public GridBsy()
         {
             InitializeComponent();
+            _conn.Open();
         }
-
-        public static GridContent Instance
+        public static GridBsy Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new GridContent();
+                    _instance = new GridBsy();
                 return _instance;
             }
         }
@@ -35,7 +31,7 @@ namespace BigAds.Frm
         {
             Guid ID = new Guid();
             Configs.UpdateSettingAppConfig("Editmode", "1");
-            FormData _f = new FormData(ID.ToString());
+            FormBsy _f = new FormBsy(ID.ToString());
             _f.ShowDialog();
         }
 
@@ -50,18 +46,20 @@ namespace BigAds.Frm
             }
 
             Configs.UpdateSettingAppConfig("Editmode", "2");
-            FormData _frmCm = new FormData(idSend);
+            FormBsy _frmCm = new FormBsy(idSend);
             _frmCm.ShowDialog();
+           
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
+            var idSend = "";
+            foreach (var item in gridView1.GetSelectedRows())
+            {
+                DataRowView a = (DataRowView)gridView1.GetRow(item);
+                idSend = a.Row["ID"].ToString();
 
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

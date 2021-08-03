@@ -48,7 +48,15 @@ namespace BigAds
             someForm.Hide();
             OpenForm(GridContent.Instance);
             splashScreenManager1.CloseWaitForm();
-            
+
+            accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)
@@ -57,8 +65,15 @@ namespace BigAds
             someForm.Hide();
             OpenForm(GridContent.Instance);
             accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
             accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
-           
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+
+
+
         }
         private void frmDashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -72,10 +87,15 @@ namespace BigAds
         {
             splashScreenManager1.ShowWaitForm();
             fluentDesignFormContainer1.Controls.Clear();
-            OpenForm(GridChuyenMuc.Instance);
+            OpenForm(GridReport.Instance);
             splashScreenManager1.CloseWaitForm();
 
             accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
             accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
 
         }
@@ -89,6 +109,76 @@ namespace BigAds
             splashScreenManager1.CloseWaitForm();
 
             accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+        }
+
+        private void ArVaccine_Click(object sender, EventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            fluentDesignFormContainer1.Controls.Clear();
+            OpenForm(GridVaxcin.Instance);
+            splashScreenManager1.CloseWaitForm();
+
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+        }
+
+        private void Arbsy_Click(object sender, EventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            fluentDesignFormContainer1.Controls.Clear();
+            OpenForm(GridBsy.Instance);
+            splashScreenManager1.CloseWaitForm();
+
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+
+        }
+
+        private void ArPatient_Click(object sender, EventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            fluentDesignFormContainer1.Controls.Clear();
+            OpenForm(GridDtuong.Instance);
+            splashScreenManager1.CloseWaitForm();
+
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+        }
+
+        private void ArGroupPatient_Click(object sender, EventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            fluentDesignFormContainer1.Controls.Clear();
+            OpenForm(GridGroupDt.Instance);
+            splashScreenManager1.CloseWaitForm();
+
+            ArGroupPatient.Appearance.Normal.BackColor = Color.FromArgb(29, 149, 246);
+
+            Arbsy.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArPatient.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            ArVaccine.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
+            accordionControlElement6.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
             accordionControlElement1.Appearance.Normal.BackColor = Color.FromArgb(31, 30, 44);
         }
     }

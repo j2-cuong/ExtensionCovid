@@ -7,21 +7,21 @@ using System.Windows.Forms;
 
 namespace BigAds.Frm
 {
-    public partial class GridChuyenMuc : DevExpress.XtraEditors.XtraUserControl
+    public partial class GridReport : DevExpress.XtraEditors.XtraUserControl
     {
         SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
-        private static GridChuyenMuc _instance;
-        public GridChuyenMuc()
+        private static GridReport _instance;
+        public GridReport()
         {
             InitializeComponent();
             _conn.Open();
         }
-        public static GridChuyenMuc Instance
+        public static GridReport Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new GridChuyenMuc();
+                    _instance = new GridReport();
                 return _instance;
             }
         }

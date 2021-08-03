@@ -59,7 +59,7 @@ namespace BigAds.Frm
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(988, 473);
             this.groupControl2.TabIndex = 7;
-            this.groupControl2.Text = "Dữ liệu";
+            this.groupControl2.Text = "Thông tin đối tượng";
             // 
             // gridControl1
             // 
@@ -213,7 +213,7 @@ namespace BigAds.Frm
             this.btnDelete.OnIdleState.BorderThickness = 1;
             this.btnDelete.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.btnDelete.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.btnDelete.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.OnIdleState.IconLeftImage")));
             this.btnDelete.OnIdleState.IconRightImage = null;
             this.btnDelete.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnDelete.OnPressedState.BorderRadius = 10;
@@ -303,7 +303,7 @@ namespace BigAds.Frm
             this.btnEdit.OnIdleState.BorderThickness = 1;
             this.btnEdit.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnEdit.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnTest.OnIdleState.IconLeftImage")));
+            this.btnEdit.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.OnIdleState.IconLeftImage")));
             this.btnEdit.OnIdleState.IconRightImage = null;
             this.btnEdit.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnEdit.OnPressedState.BorderRadius = 10;
@@ -393,7 +393,7 @@ namespace BigAds.Frm
             this.btnAdd.OnIdleState.BorderThickness = 1;
             this.btnAdd.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btnAdd.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.OnIdleState.IconLeftImage")));
+            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.OnIdleState.IconLeftImage")));
             this.btnAdd.OnIdleState.IconRightImage = null;
             this.btnAdd.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnAdd.OnPressedState.BorderRadius = 10;

@@ -26,14 +26,6 @@ namespace BigAds.Frm
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

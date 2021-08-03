@@ -59,7 +59,7 @@ namespace BigAds.Frm
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(988, 473);
             this.groupControl2.TabIndex = 7;
-            this.groupControl2.Text = "Dữ liệu";
+            this.groupControl2.Text = "Thông tin bác sỹ";
             // 
             // gridControl1
             // 

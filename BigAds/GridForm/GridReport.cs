@@ -26,6 +26,14 @@ namespace BigAds.Frm
             }
         }
 
-        
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

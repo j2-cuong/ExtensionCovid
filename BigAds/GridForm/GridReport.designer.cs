@@ -210,7 +210,7 @@ namespace BigAds.Frm
             this.btnExport.OnIdleState.BorderThickness = 1;
             this.btnExport.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnExport.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnExport.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnTest.OnIdleState.IconLeftImage")));
+            this.btnExport.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnExport.OnIdleState.IconLeftImage")));
             this.btnExport.OnIdleState.IconRightImage = null;
             this.btnExport.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnExport.OnPressedState.BorderRadius = 10;
@@ -227,6 +227,7 @@ namespace BigAds.Frm
             this.btnExport.TextMarginLeft = 0;
             this.btnExport.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnExport.UseDefaultRadiusAndThickness = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnRefresh
             // 
@@ -299,7 +300,7 @@ namespace BigAds.Frm
             this.btnRefresh.OnIdleState.BorderThickness = 1;
             this.btnRefresh.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btnRefresh.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.OnIdleState.IconLeftImage")));
+            this.btnRefresh.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.OnIdleState.IconLeftImage")));
             this.btnRefresh.OnIdleState.IconRightImage = null;
             this.btnRefresh.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnRefresh.OnPressedState.BorderRadius = 10;
@@ -316,6 +317,7 @@ namespace BigAds.Frm
             this.btnRefresh.TextMarginLeft = 0;
             this.btnRefresh.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnRefresh.UseDefaultRadiusAndThickness = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // GridReport
             // 

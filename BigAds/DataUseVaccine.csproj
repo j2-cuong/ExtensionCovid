@@ -414,6 +414,7 @@
     <None Include="Resources\actions_book.svg" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\LoadData.cs" />
     <None Include="Resources\doublelast_16x16.png" />
     <None Include="Resources\doublenext_16x16.png" />
     <None Include="Resources\doubleprev_16x16.png" />

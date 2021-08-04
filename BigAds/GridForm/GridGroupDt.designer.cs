@@ -36,9 +36,9 @@ namespace BigAds.Frm
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CategoriesDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.userAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.isTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GroupDTuong_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GroupDTuong_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.isTimeAdd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -75,53 +75,49 @@ namespace BigAds.Frm
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CategoriesDescription,
-            this.userAdd,
-            this.isTime});
+            this.GroupDTuong_ma,
+            this.GroupDTuong_ten,
+            this.isTimeAdd});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
+            this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             // 
-            // CategoriesDescription
+            // GroupDTuong_ma
             // 
-            this.CategoriesDescription.AppearanceHeader.Options.UseTextOptions = true;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.CategoriesDescription.Caption = "Tên chuyên mục";
-            this.CategoriesDescription.FieldName = "CategoriesDescription";
-            this.CategoriesDescription.Name = "CategoriesDescription";
-            this.CategoriesDescription.OptionsColumn.ReadOnly = true;
-            this.CategoriesDescription.Visible = true;
-            this.CategoriesDescription.VisibleIndex = 0;
-            this.CategoriesDescription.Width = 300;
+            this.GroupDTuong_ma.Caption = "Mã nhóm";
+            this.GroupDTuong_ma.FieldName = "GroupDTuong_ma";
+            this.GroupDTuong_ma.Name = "GroupDTuong_ma";
+            this.GroupDTuong_ma.Visible = true;
+            this.GroupDTuong_ma.VisibleIndex = 1;
             // 
-            // userAdd
+            // GroupDTuong_ten
             // 
-            this.userAdd.AppearanceHeader.Options.UseTextOptions = true;
-            this.userAdd.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.userAdd.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.userAdd.Caption = "User thêm mới";
-            this.userAdd.FieldName = "userAdd";
-            this.userAdd.Name = "userAdd";
-            this.userAdd.OptionsColumn.ReadOnly = true;
-            this.userAdd.Visible = true;
-            this.userAdd.VisibleIndex = 1;
-            this.userAdd.Width = 100;
+            this.GroupDTuong_ten.AppearanceHeader.Options.UseTextOptions = true;
+            this.GroupDTuong_ten.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GroupDTuong_ten.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.GroupDTuong_ten.Caption = "Tên nhóm";
+            this.GroupDTuong_ten.FieldName = "GroupDTuong_ten";
+            this.GroupDTuong_ten.Name = "GroupDTuong_ten";
+            this.GroupDTuong_ten.OptionsColumn.ReadOnly = true;
+            this.GroupDTuong_ten.Visible = true;
+            this.GroupDTuong_ten.VisibleIndex = 2;
+            this.GroupDTuong_ten.Width = 300;
             // 
-            // isTime
+            // isTimeAdd
             // 
-            this.isTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.isTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.isTime.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.isTime.Caption = "Time UpLoad";
-            this.isTime.DisplayFormat.FormatString = "dd-MM-yy    hh : mm : ss";
-            this.isTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.isTime.FieldName = "isTime";
-            this.isTime.Name = "isTime";
-            this.isTime.OptionsColumn.ReadOnly = true;
-            this.isTime.Visible = true;
-            this.isTime.VisibleIndex = 2;
+            this.isTimeAdd.AppearanceHeader.Options.UseTextOptions = true;
+            this.isTimeAdd.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.isTimeAdd.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.isTimeAdd.Caption = "Time UpLoad";
+            this.isTimeAdd.DisplayFormat.FormatString = "dd-MM-yyyy    hh : mm : ss";
+            this.isTimeAdd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.isTimeAdd.FieldName = "isTimeAdd";
+            this.isTimeAdd.Name = "isTimeAdd";
+            this.isTimeAdd.OptionsColumn.ReadOnly = true;
+            this.isTimeAdd.Visible = true;
+            this.isTimeAdd.VisibleIndex = 3;
             // 
             // groupControl1
             // 
@@ -279,7 +275,7 @@ namespace BigAds.Frm
             this.btnEdit.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.IdleIconLeftImage")));
             this.btnEdit.IdleIconRightImage = null;
             this.btnEdit.IndicateFocus = false;
-            this.btnEdit.Location = new System.Drawing.Point(144, 11);
+            this.btnEdit.Location = new System.Drawing.Point(147, 11);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEdit.OnDisabledState.BorderRadius = 10;
@@ -369,7 +365,7 @@ namespace BigAds.Frm
             this.btnAdd.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.IdleIconLeftImage")));
             this.btnAdd.IdleIconRightImage = null;
             this.btnAdd.IndicateFocus = false;
-            this.btnAdd.Location = new System.Drawing.Point(32, 11);
+            this.btnAdd.Location = new System.Drawing.Point(25, 11);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.OnDisabledState.BorderRadius = 10;
@@ -434,12 +430,12 @@ namespace BigAds.Frm
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn CategoriesDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn userAdd;
-        private DevExpress.XtraGrid.Columns.GridColumn isTime;
+        private DevExpress.XtraGrid.Columns.GridColumn GroupDTuong_ten;
+        private DevExpress.XtraGrid.Columns.GridColumn isTimeAdd;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn GroupDTuong_ma;
     }
 }

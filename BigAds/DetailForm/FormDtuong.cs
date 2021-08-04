@@ -35,8 +35,6 @@ namespace BigAds.FormDetail
             Close();
         }
 
-        
-
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -45,6 +43,11 @@ namespace BigAds.FormDetail
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

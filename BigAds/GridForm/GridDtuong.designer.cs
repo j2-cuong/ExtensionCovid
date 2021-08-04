@@ -36,9 +36,23 @@ namespace BigAds.Frm
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CategoriesDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.userAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.isTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_nsinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_GTinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_DVCtac = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_SDT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_CCCD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_BHYT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NhomDT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_Tinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_TinhCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_Quan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_QuanCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_Xa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_XaCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_DCCtiet = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.isTimeAdd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -75,53 +89,200 @@ namespace BigAds.Frm
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CategoriesDescription,
-            this.userAdd,
-            this.isTime});
+            this.DTuong_ma,
+            this.DTuong_ten,
+            this.DTuong_nsinh,
+            this.DTuong_GTinh,
+            this.DTuong_DVCtac,
+            this.DTuong_SDT,
+            this.DTuong_CCCD,
+            this.DTuong_BHYT,
+            this.NhomDT,
+            this.DTuong_Tinh,
+            this.DTuong_TinhCode,
+            this.DTuong_Quan,
+            this.DTuong_QuanCode,
+            this.DTuong_Xa,
+            this.DTuong_XaCode,
+            this.DTuong_DCCtiet,
+            this.isTimeAdd});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
+            this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
-            // CategoriesDescription
+            // DTuong_ma
             // 
-            this.CategoriesDescription.AppearanceHeader.Options.UseTextOptions = true;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.CategoriesDescription.Caption = "Tên chuyên mục";
-            this.CategoriesDescription.FieldName = "CategoriesDescription";
-            this.CategoriesDescription.Name = "CategoriesDescription";
-            this.CategoriesDescription.OptionsColumn.ReadOnly = true;
-            this.CategoriesDescription.Visible = true;
-            this.CategoriesDescription.VisibleIndex = 0;
-            this.CategoriesDescription.Width = 300;
+            this.DTuong_ma.Caption = "Mã ĐT";
+            this.DTuong_ma.FieldName = "DTuong_ma";
+            this.DTuong_ma.Name = "DTuong_ma";
+            this.DTuong_ma.OptionsColumn.ReadOnly = true;
+            this.DTuong_ma.Visible = true;
+            this.DTuong_ma.VisibleIndex = 1;
+            this.DTuong_ma.Width = 200;
             // 
-            // userAdd
+            // DTuong_ten
             // 
-            this.userAdd.AppearanceHeader.Options.UseTextOptions = true;
-            this.userAdd.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.userAdd.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.userAdd.Caption = "User thêm mới";
-            this.userAdd.FieldName = "userAdd";
-            this.userAdd.Name = "userAdd";
-            this.userAdd.OptionsColumn.ReadOnly = true;
-            this.userAdd.Visible = true;
-            this.userAdd.VisibleIndex = 1;
-            this.userAdd.Width = 100;
+            this.DTuong_ten.Caption = "Tên ĐT";
+            this.DTuong_ten.FieldName = "DTuong_ten";
+            this.DTuong_ten.Name = "DTuong_ten";
+            this.DTuong_ten.OptionsColumn.ReadOnly = true;
+            this.DTuong_ten.Visible = true;
+            this.DTuong_ten.VisibleIndex = 2;
+            this.DTuong_ten.Width = 350;
             // 
-            // isTime
+            // DTuong_nsinh
             // 
-            this.isTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.isTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.isTime.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.isTime.Caption = "Time UpLoad";
-            this.isTime.DisplayFormat.FormatString = "dd-MM-yy    hh : mm : ss";
-            this.isTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.isTime.FieldName = "isTime";
-            this.isTime.Name = "isTime";
-            this.isTime.OptionsColumn.ReadOnly = true;
-            this.isTime.Visible = true;
-            this.isTime.VisibleIndex = 2;
+            this.DTuong_nsinh.Caption = "Năm sinh";
+            this.DTuong_nsinh.DisplayFormat.FormatString = "dd-MM-yyyy";
+            this.DTuong_nsinh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.DTuong_nsinh.FieldName = "DTuong_nsinh";
+            this.DTuong_nsinh.Name = "DTuong_nsinh";
+            this.DTuong_nsinh.OptionsColumn.ReadOnly = true;
+            this.DTuong_nsinh.Visible = true;
+            this.DTuong_nsinh.VisibleIndex = 3;
+            this.DTuong_nsinh.Width = 100;
+            // 
+            // DTuong_GTinh
+            // 
+            this.DTuong_GTinh.Caption = "Giới tính";
+            this.DTuong_GTinh.FieldName = "DTuong_GTinh";
+            this.DTuong_GTinh.Name = "DTuong_GTinh";
+            this.DTuong_GTinh.OptionsColumn.ReadOnly = true;
+            this.DTuong_GTinh.Visible = true;
+            this.DTuong_GTinh.VisibleIndex = 4;
+            this.DTuong_GTinh.Width = 100;
+            // 
+            // DTuong_DVCtac
+            // 
+            this.DTuong_DVCtac.Caption = "Đơn vị C/tác";
+            this.DTuong_DVCtac.FieldName = "DTuong_DVCtac";
+            this.DTuong_DVCtac.Name = "DTuong_DVCtac";
+            this.DTuong_DVCtac.OptionsColumn.ReadOnly = true;
+            this.DTuong_DVCtac.Visible = true;
+            this.DTuong_DVCtac.VisibleIndex = 5;
+            this.DTuong_DVCtac.Width = 350;
+            // 
+            // DTuong_SDT
+            // 
+            this.DTuong_SDT.Caption = "Số ĐT";
+            this.DTuong_SDT.FieldName = "DTuong_SDT";
+            this.DTuong_SDT.Name = "DTuong_SDT";
+            this.DTuong_SDT.OptionsColumn.ReadOnly = true;
+            this.DTuong_SDT.Visible = true;
+            this.DTuong_SDT.VisibleIndex = 6;
+            this.DTuong_SDT.Width = 100;
+            // 
+            // DTuong_CCCD
+            // 
+            this.DTuong_CCCD.Caption = "CMND / CCCD";
+            this.DTuong_CCCD.FieldName = "DTuong_CCCD";
+            this.DTuong_CCCD.Name = "DTuong_CCCD";
+            this.DTuong_CCCD.OptionsColumn.ReadOnly = true;
+            this.DTuong_CCCD.Visible = true;
+            this.DTuong_CCCD.VisibleIndex = 7;
+            this.DTuong_CCCD.Width = 100;
+            // 
+            // DTuong_BHYT
+            // 
+            this.DTuong_BHYT.Caption = "Thẻ BHYT";
+            this.DTuong_BHYT.FieldName = "DTuong_BHYT";
+            this.DTuong_BHYT.Name = "DTuong_BHYT";
+            this.DTuong_BHYT.OptionsColumn.ReadOnly = true;
+            this.DTuong_BHYT.Visible = true;
+            this.DTuong_BHYT.VisibleIndex = 8;
+            this.DTuong_BHYT.Width = 100;
+            // 
+            // NhomDT
+            // 
+            this.NhomDT.Caption = "Nhóm ĐT";
+            this.NhomDT.FieldName = "NhomDT";
+            this.NhomDT.Name = "NhomDT";
+            this.NhomDT.OptionsColumn.ReadOnly = true;
+            this.NhomDT.Visible = true;
+            this.NhomDT.VisibleIndex = 9;
+            this.NhomDT.Width = 450;
+            // 
+            // DTuong_Tinh
+            // 
+            this.DTuong_Tinh.Caption = "Tỉnh";
+            this.DTuong_Tinh.FieldName = "DTuong_Tinh";
+            this.DTuong_Tinh.Name = "DTuong_Tinh";
+            this.DTuong_Tinh.OptionsColumn.ReadOnly = true;
+            this.DTuong_Tinh.Visible = true;
+            this.DTuong_Tinh.VisibleIndex = 10;
+            this.DTuong_Tinh.Width = 100;
+            // 
+            // DTuong_TinhCode
+            // 
+            this.DTuong_TinhCode.Caption = "Mã tỉnh";
+            this.DTuong_TinhCode.FieldName = "DTuong_TinhCode";
+            this.DTuong_TinhCode.Name = "DTuong_TinhCode";
+            this.DTuong_TinhCode.OptionsColumn.ReadOnly = true;
+            this.DTuong_TinhCode.Visible = true;
+            this.DTuong_TinhCode.VisibleIndex = 11;
+            this.DTuong_TinhCode.Width = 100;
+            // 
+            // DTuong_Quan
+            // 
+            this.DTuong_Quan.Caption = "Quận";
+            this.DTuong_Quan.FieldName = "DTuong_Quan";
+            this.DTuong_Quan.Name = "DTuong_Quan";
+            this.DTuong_Quan.OptionsColumn.ReadOnly = true;
+            this.DTuong_Quan.Visible = true;
+            this.DTuong_Quan.VisibleIndex = 12;
+            this.DTuong_Quan.Width = 100;
+            // 
+            // DTuong_QuanCode
+            // 
+            this.DTuong_QuanCode.Caption = "Mã Quận";
+            this.DTuong_QuanCode.FieldName = "DTuong_QuanCode";
+            this.DTuong_QuanCode.Name = "DTuong_QuanCode";
+            this.DTuong_QuanCode.OptionsColumn.ReadOnly = true;
+            this.DTuong_QuanCode.Visible = true;
+            this.DTuong_QuanCode.VisibleIndex = 13;
+            this.DTuong_QuanCode.Width = 100;
+            // 
+            // DTuong_Xa
+            // 
+            this.DTuong_Xa.Caption = "Xã";
+            this.DTuong_Xa.FieldName = "DTuong_Xa";
+            this.DTuong_Xa.Name = "DTuong_Xa";
+            this.DTuong_Xa.OptionsColumn.ReadOnly = true;
+            this.DTuong_Xa.Visible = true;
+            this.DTuong_Xa.VisibleIndex = 14;
+            this.DTuong_Xa.Width = 100;
+            // 
+            // DTuong_XaCode
+            // 
+            this.DTuong_XaCode.Caption = "Mã Xã";
+            this.DTuong_XaCode.FieldName = "DTuong_XaCode";
+            this.DTuong_XaCode.Name = "DTuong_XaCode";
+            this.DTuong_XaCode.OptionsColumn.ReadOnly = true;
+            this.DTuong_XaCode.Visible = true;
+            this.DTuong_XaCode.VisibleIndex = 15;
+            this.DTuong_XaCode.Width = 100;
+            // 
+            // DTuong_DCCtiet
+            // 
+            this.DTuong_DCCtiet.Caption = "Đ/C chi tiết";
+            this.DTuong_DCCtiet.FieldName = "DTuong_DCCtiet";
+            this.DTuong_DCCtiet.Name = "DTuong_DCCtiet";
+            this.DTuong_DCCtiet.OptionsColumn.ReadOnly = true;
+            this.DTuong_DCCtiet.Visible = true;
+            this.DTuong_DCCtiet.VisibleIndex = 16;
+            this.DTuong_DCCtiet.Width = 350;
+            // 
+            // isTimeAdd
+            // 
+            this.isTimeAdd.Caption = "Time Upload";
+            this.isTimeAdd.FieldName = "isTimeAdd";
+            this.isTimeAdd.Name = "isTimeAdd";
+            this.isTimeAdd.OptionsColumn.ReadOnly = true;
+            this.isTimeAdd.Visible = true;
+            this.isTimeAdd.VisibleIndex = 17;
             // 
             // groupControl1
             // 
@@ -434,12 +595,26 @@ namespace BigAds.Frm
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn CategoriesDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn userAdd;
-        private DevExpress.XtraGrid.Columns.GridColumn isTime;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_ma;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_ten;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_nsinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_GTinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_DVCtac;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_SDT;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_CCCD;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_BHYT;
+        private DevExpress.XtraGrid.Columns.GridColumn NhomDT;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_Tinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_TinhCode;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_Quan;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_QuanCode;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_Xa;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_XaCode;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_DCCtiet;
+        private DevExpress.XtraGrid.Columns.GridColumn isTimeAdd;
     }
 }

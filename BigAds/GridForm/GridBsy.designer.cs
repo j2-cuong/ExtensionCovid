@@ -36,9 +36,13 @@ namespace BigAds.Frm
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CategoriesDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.userAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.isTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_diaChi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_chuyenKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Exp = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Phone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_bangCap = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -75,53 +79,98 @@ namespace BigAds.Frm
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CategoriesDescription,
-            this.userAdd,
-            this.isTime});
+            this.DMBsy_Ma,
+            this.DMBsy_Ten,
+            this.DMBsy_diaChi,
+            this.DMBsy_chuyenKhoa,
+            this.DMBsy_Exp,
+            this.DMBsy_Phone,
+            this.DMBsy_bangCap});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
+            this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
-            // CategoriesDescription
+            // DMBsy_Ma
             // 
-            this.CategoriesDescription.AppearanceHeader.Options.UseTextOptions = true;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.CategoriesDescription.Caption = "Tên chuyên mục";
-            this.CategoriesDescription.FieldName = "CategoriesDescription";
-            this.CategoriesDescription.Name = "CategoriesDescription";
-            this.CategoriesDescription.OptionsColumn.ReadOnly = true;
-            this.CategoriesDescription.Visible = true;
-            this.CategoriesDescription.VisibleIndex = 0;
-            this.CategoriesDescription.Width = 300;
+            this.DMBsy_Ma.AppearanceHeader.Options.UseTextOptions = true;
+            this.DMBsy_Ma.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DMBsy_Ma.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DMBsy_Ma.Caption = "Mã B.sỹ";
+            this.DMBsy_Ma.FieldName = "DMBsy_Ma";
+            this.DMBsy_Ma.Name = "DMBsy_Ma";
+            this.DMBsy_Ma.OptionsColumn.ReadOnly = true;
+            this.DMBsy_Ma.Visible = true;
+            this.DMBsy_Ma.VisibleIndex = 1;
+            this.DMBsy_Ma.Width = 150;
             // 
-            // userAdd
+            // DMBsy_Ten
             // 
-            this.userAdd.AppearanceHeader.Options.UseTextOptions = true;
-            this.userAdd.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.userAdd.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.userAdd.Caption = "User thêm mới";
-            this.userAdd.FieldName = "userAdd";
-            this.userAdd.Name = "userAdd";
-            this.userAdd.OptionsColumn.ReadOnly = true;
-            this.userAdd.Visible = true;
-            this.userAdd.VisibleIndex = 1;
-            this.userAdd.Width = 100;
+            this.DMBsy_Ten.AppearanceHeader.Options.UseTextOptions = true;
+            this.DMBsy_Ten.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DMBsy_Ten.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DMBsy_Ten.Caption = "Tên B.sỹ";
+            this.DMBsy_Ten.FieldName = "DMBsy_Ten";
+            this.DMBsy_Ten.Name = "DMBsy_Ten";
+            this.DMBsy_Ten.OptionsColumn.ReadOnly = true;
+            this.DMBsy_Ten.Visible = true;
+            this.DMBsy_Ten.VisibleIndex = 2;
+            this.DMBsy_Ten.Width = 300;
             // 
-            // isTime
+            // DMBsy_diaChi
             // 
-            this.isTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.isTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.isTime.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.isTime.Caption = "Time UpLoad";
-            this.isTime.DisplayFormat.FormatString = "dd-MM-yy    hh : mm : ss";
-            this.isTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.isTime.FieldName = "isTime";
-            this.isTime.Name = "isTime";
-            this.isTime.OptionsColumn.ReadOnly = true;
-            this.isTime.Visible = true;
-            this.isTime.VisibleIndex = 2;
+            this.DMBsy_diaChi.AppearanceHeader.Options.UseTextOptions = true;
+            this.DMBsy_diaChi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DMBsy_diaChi.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DMBsy_diaChi.Caption = "Địa chỉ";
+            this.DMBsy_diaChi.FieldName = "DMBsy_diaChi";
+            this.DMBsy_diaChi.Name = "DMBsy_diaChi";
+            this.DMBsy_diaChi.OptionsColumn.ReadOnly = true;
+            this.DMBsy_diaChi.Visible = true;
+            this.DMBsy_diaChi.VisibleIndex = 3;
+            this.DMBsy_diaChi.Width = 350;
+            // 
+            // DMBsy_chuyenKhoa
+            // 
+            this.DMBsy_chuyenKhoa.Caption = "Chuyên khoa";
+            this.DMBsy_chuyenKhoa.FieldName = "DMBsy_chuyenKhoa";
+            this.DMBsy_chuyenKhoa.Name = "DMBsy_chuyenKhoa";
+            this.DMBsy_chuyenKhoa.OptionsColumn.ReadOnly = true;
+            this.DMBsy_chuyenKhoa.Visible = true;
+            this.DMBsy_chuyenKhoa.VisibleIndex = 4;
+            this.DMBsy_chuyenKhoa.Width = 150;
+            // 
+            // DMBsy_Exp
+            // 
+            this.DMBsy_Exp.Caption = "Kinh nghiệm";
+            this.DMBsy_Exp.FieldName = "DMBsy_Exp";
+            this.DMBsy_Exp.Name = "DMBsy_Exp";
+            this.DMBsy_Exp.OptionsColumn.ReadOnly = true;
+            this.DMBsy_Exp.Visible = true;
+            this.DMBsy_Exp.VisibleIndex = 5;
+            this.DMBsy_Exp.Width = 120;
+            // 
+            // DMBsy_Phone
+            // 
+            this.DMBsy_Phone.Caption = "Điện thoại";
+            this.DMBsy_Phone.FieldName = "DMBsy_Phone";
+            this.DMBsy_Phone.Name = "DMBsy_Phone";
+            this.DMBsy_Phone.OptionsColumn.ReadOnly = true;
+            this.DMBsy_Phone.Visible = true;
+            this.DMBsy_Phone.VisibleIndex = 6;
+            this.DMBsy_Phone.Width = 120;
+            // 
+            // DMBsy_bangCap
+            // 
+            this.DMBsy_bangCap.Caption = "Bằng cấp";
+            this.DMBsy_bangCap.FieldName = "DMBsy_bangCap";
+            this.DMBsy_bangCap.Name = "DMBsy_bangCap";
+            this.DMBsy_bangCap.OptionsColumn.ReadOnly = true;
+            this.DMBsy_bangCap.Visible = true;
+            this.DMBsy_bangCap.VisibleIndex = 7;
+            this.DMBsy_bangCap.Width = 120;
             // 
             // groupControl1
             // 
@@ -434,12 +483,16 @@ namespace BigAds.Frm
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn CategoriesDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn userAdd;
-        private DevExpress.XtraGrid.Columns.GridColumn isTime;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ma;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ten;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_diaChi;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_chuyenKhoa;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Exp;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Phone;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_bangCap;
     }
 }

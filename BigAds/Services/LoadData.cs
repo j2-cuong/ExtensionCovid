@@ -66,5 +66,34 @@ namespace BigAds.Services
             _data.Fill(DTuong);
             return DTuong;
         }
+
+        public static DataTable LoadBsy()
+        {
+            SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
+            if (_conn.State == ConnectionState.Closed)
+            {
+                _conn.Open();
+            }
+            DataTable DTuong = new DataTable();
+            var text = $"select * from dbo.DMBsy";
+            SqlDataAdapter _data = new SqlDataAdapter(text, _conn);
+            _data.Fill(DTuong);
+            return DTuong;
+        }
+
+        public static DataTable bindingBsy(string ID)
+        {
+            SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
+            if (_conn.State == ConnectionState.Closed)
+            {
+                _conn.Open();
+            }
+
+            DataTable DTuong = new DataTable();
+            var text = $"select * from dbo.DMBsy where DMBsy_id = '{ID}'";
+            SqlDataAdapter _data = new SqlDataAdapter(text, _conn);
+            _data.Fill(DTuong);
+            return DTuong;
+        }
     }
 }

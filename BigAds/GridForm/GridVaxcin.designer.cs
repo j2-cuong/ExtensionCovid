@@ -36,13 +36,18 @@ namespace BigAds.Frm
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CategoriesDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.userAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.isTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_nsx = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.vx_location = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_lo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_hsd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_slNhap = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx__slXuat = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -75,53 +80,59 @@ namespace BigAds.Frm
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CategoriesDescription,
-            this.userAdd,
-            this.isTime});
+            this.vx_ma,
+            this.vx_ten,
+            this.vx_nsx,
+            this.vx_location,
+            this.vx_lo,
+            this.vx_hsd,
+            this.vx_slNhap,
+            this.vx__slXuat});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
+            this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
-            // CategoriesDescription
+            // vx_ma
             // 
-            this.CategoriesDescription.AppearanceHeader.Options.UseTextOptions = true;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CategoriesDescription.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.CategoriesDescription.Caption = "Tên chuyên mục";
-            this.CategoriesDescription.FieldName = "CategoriesDescription";
-            this.CategoriesDescription.Name = "CategoriesDescription";
-            this.CategoriesDescription.OptionsColumn.ReadOnly = true;
-            this.CategoriesDescription.Visible = true;
-            this.CategoriesDescription.VisibleIndex = 0;
-            this.CategoriesDescription.Width = 300;
+            this.vx_ma.AppearanceHeader.Options.UseTextOptions = true;
+            this.vx_ma.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.vx_ma.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.vx_ma.Caption = "Mã ‎Vaccine";
+            this.vx_ma.FieldName = "vx_ma";
+            this.vx_ma.Name = "vx_ma";
+            this.vx_ma.OptionsColumn.ReadOnly = true;
+            this.vx_ma.Visible = true;
+            this.vx_ma.VisibleIndex = 1;
+            this.vx_ma.Width = 150;
             // 
-            // userAdd
+            // vx_ten
             // 
-            this.userAdd.AppearanceHeader.Options.UseTextOptions = true;
-            this.userAdd.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.userAdd.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.userAdd.Caption = "User thêm mới";
-            this.userAdd.FieldName = "userAdd";
-            this.userAdd.Name = "userAdd";
-            this.userAdd.OptionsColumn.ReadOnly = true;
-            this.userAdd.Visible = true;
-            this.userAdd.VisibleIndex = 1;
-            this.userAdd.Width = 100;
+            this.vx_ten.AppearanceHeader.Options.UseTextOptions = true;
+            this.vx_ten.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.vx_ten.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.vx_ten.Caption = "Tên ‎Vaccine";
+            this.vx_ten.FieldName = "vx_ten";
+            this.vx_ten.Name = "vx_ten";
+            this.vx_ten.OptionsColumn.ReadOnly = true;
+            this.vx_ten.Visible = true;
+            this.vx_ten.VisibleIndex = 2;
+            this.vx_ten.Width = 250;
             // 
-            // isTime
+            // vx_nsx
             // 
-            this.isTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.isTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.isTime.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.isTime.Caption = "Time UpLoad";
-            this.isTime.DisplayFormat.FormatString = "dd-MM-yy    hh : mm : ss";
-            this.isTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.isTime.FieldName = "isTime";
-            this.isTime.Name = "isTime";
-            this.isTime.OptionsColumn.ReadOnly = true;
-            this.isTime.Visible = true;
-            this.isTime.VisibleIndex = 2;
+            this.vx_nsx.AppearanceHeader.Options.UseTextOptions = true;
+            this.vx_nsx.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.vx_nsx.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.vx_nsx.Caption = "Nhà sx";
+            this.vx_nsx.FieldName = "vx_nsx";
+            this.vx_nsx.Name = "vx_nsx";
+            this.vx_nsx.OptionsColumn.ReadOnly = true;
+            this.vx_nsx.Visible = true;
+            this.vx_nsx.VisibleIndex = 8;
+            this.vx_nsx.Width = 250;
             // 
             // groupControl1
             // 
@@ -412,6 +423,60 @@ namespace BigAds.Frm
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // vx_location
+            // 
+            this.vx_location.Caption = "Nước sx";
+            this.vx_location.FieldName = "vx_location";
+            this.vx_location.Name = "vx_location";
+            this.vx_location.OptionsColumn.ReadOnly = true;
+            this.vx_location.Visible = true;
+            this.vx_location.VisibleIndex = 3;
+            this.vx_location.Width = 250;
+            // 
+            // vx_lo
+            // 
+            this.vx_lo.Caption = "Lô";
+            this.vx_lo.FieldName = "vx_lo";
+            this.vx_lo.Name = "vx_lo";
+            this.vx_lo.OptionsColumn.ReadOnly = true;
+            this.vx_lo.Visible = true;
+            this.vx_lo.VisibleIndex = 4;
+            this.vx_lo.Width = 150;
+            // 
+            // vx_hsd
+            // 
+            this.vx_hsd.Caption = "Hạn SD";
+            this.vx_hsd.DisplayFormat.FormatString = "dd - MM - yyyy";
+            this.vx_hsd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.vx_hsd.FieldName = "vx_hsd";
+            this.vx_hsd.Name = "vx_hsd";
+            this.vx_hsd.OptionsColumn.ReadOnly = true;
+            this.vx_hsd.Visible = true;
+            this.vx_hsd.VisibleIndex = 5;
+            this.vx_hsd.Width = 150;
+            // 
+            // vx_slNhap
+            // 
+            this.vx_slNhap.Caption = "SL nhập";
+            this.vx_slNhap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.vx_slNhap.FieldName = "vx_slNhap";
+            this.vx_slNhap.Name = "vx_slNhap";
+            this.vx_slNhap.OptionsColumn.ReadOnly = true;
+            this.vx_slNhap.Visible = true;
+            this.vx_slNhap.VisibleIndex = 6;
+            this.vx_slNhap.Width = 150;
+            // 
+            // vx__slXuat
+            // 
+            this.vx__slXuat.Caption = "SL xuất";
+            this.vx__slXuat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.vx__slXuat.FieldName = "vx__slXuat";
+            this.vx__slXuat.Name = "vx__slXuat";
+            this.vx__slXuat.OptionsColumn.ReadOnly = true;
+            this.vx__slXuat.Visible = true;
+            this.vx__slXuat.VisibleIndex = 7;
+            this.vx__slXuat.Width = 150;
+            // 
             // GridVaxcin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,12 +499,17 @@ namespace BigAds.Frm
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn CategoriesDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn userAdd;
-        private DevExpress.XtraGrid.Columns.GridColumn isTime;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ma;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ten;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_nsx;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_location;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_lo;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_hsd;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_slNhap;
+        private DevExpress.XtraGrid.Columns.GridColumn vx__slXuat;
     }
 }

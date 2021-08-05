@@ -102,6 +102,10 @@ namespace BigAds.Frm
             {
                 try
                 {
+                    if (_conn.State == ConnectionState.Closed)
+                    {
+                        _conn.Open();
+                    }
                     var Qr = $"Delete DMBsy where DMBsy_id = '{idSend}'";
                     SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
                     InsertSQL.ExecuteNonQuery();

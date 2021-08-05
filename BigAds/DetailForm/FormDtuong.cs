@@ -129,8 +129,8 @@ namespace BigAds.FormDetail
                                 var Que = "INSERT INTO dbo.DTuong VALUES  ( NEWID() ," +
                                     $"N'{txtMaDT.Text.Trim()}' , " +
                                     $"N'{txtTenDT.Text.Trim()}' , " +
-                                    $"'{NamSinh}' , " +
-                                    $"{gt} , " +
+                                    $"N'{NamSinh}' , " +
+                                    $"N'{gt}' , " +
                                     $"N'{txtDvctac.Text.Trim()}' , " +
                                     $"N'{txtdienthoai.Text.Trim()}' ," +
                                     $"N'{txtCCCD.Text.Trim()}' ," +
@@ -222,7 +222,7 @@ namespace BigAds.FormDetail
 
                                 var Que = "Update dbo.DTuong set" +
                                     $" DTuong_ten= N'{txtTenDT.Text.Trim()}' , " +
-                                    $" DTuong_nsinh= '{NamSinh}' , " +
+                                    $" DTuong_nsinh= N'{NamSinh}' , " +
                                     $" DTuong_GTinh= N'{gt}' , " +
                                     $" DTuong_DVCtac= N'{txtDvctac.Text.Trim()}' , " +
                                     $" DTuong_SDT= N'{txtdienthoai.Text.Trim()}' ," +
@@ -263,59 +263,76 @@ namespace BigAds.FormDetail
 
         private void FormDtuong_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.Editmode.Contains("2"))
+            try
             {
-                DataTable _data = LoadData.bindingDTuong(idGrid);
-                if(_data.Rows.Count > 0)
+                if (Properties.Settings.Default.Editmode.Contains("2"))
                 {
-                    foreach (DataRow item in _data.Rows)
+                    if (!string.IsNullOrEmpty(idGrid))
                     {
-                        txtMaDT.Text = item["DTuong_ma"].ToString();
-                        txtTenDT.Text = item["DTuong_ten"].ToString();
-                        txtNamSinh.Text = DateTime.Parse(item["DTuong_nsinh"].ToString()).ToString("yyyy-MM-dd");
+                        DataTable _data = LoadData.bindingDTuong(idGrid);
+                        if (_data.Rows.Count > 0)
+                        {
+                            foreach (DataRow item in _data.Rows)
+                            {
+                                txtMaDT.Text = item["DTuong_ma"].ToString();
+                                txtTenDT.Text = item["DTuong_ten"].ToString();
+                                txtNamSinh.Text = DateTime.Parse(item["DTuong_nsinh"].ToString()).ToString("yyyy-MM-dd");
 
-                        if (item["DTuong_GTinh"].ToString().Contains("Nam"))
-                        {
-                            txtNam.Checked = true;
-                            txtNu.Checked = false;
-                        } else
-                        {
-                            txtNu.Checked = true;
-                            txtNam.Checked = false;
+                                if (item["DTuong_GTinh"].ToString().Contains("Nam"))
+                                {
+                                    txtNam.Checked = true;
+                                    txtNu.Checked = false;
+                                }
+                                else
+                                {
+                                    txtNu.Checked = true;
+                                    txtNam.Checked = false;
+                                }
+
+                                txtDvctac.Text = !string.IsNullOrEmpty(item["DTuong_DVCtac"].ToString()) ? item["DTuong_DVCtac"].ToString() : null;
+                                txtdienthoai.Text = !string.IsNullOrEmpty(item["DTuong_SDT"].ToString()) ? item["DTuong_SDT"].ToString() : null;
+                                txtCCCD.Text = !string.IsNullOrEmpty(item["DTuong_CCCD"].ToString()) ? item["DTuong_CCCD"].ToString() : null;
+                                txttheBH.Text = !string.IsNullOrEmpty(item["DTuong_BHYT"].ToString()) ? item["DTuong_BHYT"].ToString() : null;
+                                txtNhomUT.Text = !string.IsNullOrEmpty(item["DTuong_MaNhom"].ToString()) ? item["DTuong_MaNhom"].ToString() : null;
+                                txtTinh.Text = !string.IsNullOrEmpty(item["DTuong_Tinh"].ToString()) ? item["DTuong_Tinh"].ToString() : null;
+                                txtCodeTinh.Text = !string.IsNullOrEmpty(item["DTuong_TinhCode"].ToString()) ? item["DTuong_TinhCode"].ToString() : null;
+                                txtQuan.Text = !string.IsNullOrEmpty(item["DTuong_Quan"].ToString()) ? item["DTuong_Quan"].ToString() : null;
+                                txtCodeQuan.Text = !string.IsNullOrEmpty(item["DTuong_QuanCode"].ToString()) ? item["DTuong_QuanCode"].ToString() : null;
+                                txtXa.Text = !string.IsNullOrEmpty(item["DTuong_Xa"].ToString()) ? item["DTuong_Xa"].ToString() : null;
+                                if (!string.IsNullOrEmpty(item["DTuong_XaCode"].ToString()))
+                                {
+                                    txtCodeXa.Text = item["DTuong_XaCode"].ToString();
+                                }
+                                else
+                                {
+                                    txtCodeXa.Text = null;
+
+                                }
+                                txtDcChiTiet.Text = !string.IsNullOrEmpty(item["DTuong_DCCtiet"].ToString()) ? item["DTuong_DCCtiet"].ToString() : null;
+                            }
                         }
-                        
-
-
-                        txtDvctac.Text = !string.IsNullOrEmpty(item["DTuong_DVCtac"].ToString()) ? item["DTuong_DVCtac"].ToString() : null;
-                        txtdienthoai.Text = !string.IsNullOrEmpty(item["DTuong_SDT"].ToString()) ? item["DTuong_SDT"].ToString() : null;
-                        txtCCCD.Text = !string.IsNullOrEmpty(item["DTuong_CCCD"].ToString()) ? item["DTuong_CCCD"].ToString() : null;
-                        txttheBH.Text = !string.IsNullOrEmpty(item["DTuong_BHYT"].ToString()) ? item["DTuong_BHYT"].ToString() : null;
-                        txtNhomUT.Text = !string.IsNullOrEmpty(item["DTuong_MaNhom"].ToString()) ? item["DTuong_MaNhom"].ToString() : null;
-                        txtTinh.Text = !string.IsNullOrEmpty(item["DTuong_Tinh"].ToString()) ? item["DTuong_Tinh"].ToString() : null;
-                        txtCodeTinh.Text = !string.IsNullOrEmpty(item["DTuong_TinhCode"].ToString()) ? item["DTuong_TinhCode"].ToString() : null;
-                        txtQuan.Text = !string.IsNullOrEmpty(item["DTuong_Quan"].ToString()) ? item["DTuong_Quan"].ToString() : null;
-                        txtCodeQuan.Text = !string.IsNullOrEmpty(item["DTuong_QuanCode"].ToString()) ? item["DTuong_QuanCode"].ToString() : null;
-                        txtXa.Text = !string.IsNullOrEmpty(item["DTuong_Xa"].ToString()) ? item["DTuong_Xa"].ToString() : null;
-                        if (!string.IsNullOrEmpty(item["DTuong_XaCode"].ToString()))
+                        else
                         {
-                            txtCodeXa.Text = item["DTuong_XaCode"].ToString();
-                        } else
-                        {
-                            txtCodeXa.Text = null;
-
+                            XtraMessageBox.Show("Vui lòng thoát form và bấm tải lại dữ liệu vì không tìm thấy mã ĐT đang thao tác");
+                            return;
                         }
-                        txtDcChiTiet.Text = !string.IsNullOrEmpty(item["DTuong_DCCtiet"].ToString()) ? item["DTuong_DCCtiet"].ToString() : null;
                     }
-                } else
-                {
-                    XtraMessageBox.Show("Vui lòng thoát form và bấm tải lại dữ liệu vì không tìm thấy mã ĐT đang thao tác");
-                    return;
+                    else
+                    {
+                        XtraMessageBox.Show("Bạn chưa chọn mã để thao tác");
+                        Close();
+                    }
                 }
+                txtValue.Properties.DataSource = dvhc.GetTinhTpho();
+                txtValue.Properties.DisplayMember = Tinh.ToString();
+                txtValue.Properties.ValueMember = Tinh.ToString();
                 
+            } catch (Exception ev)
+            {
+                XtraMessageBox.Show(ev.Message);
+                return;
             }
-            txtValue.Properties.DataSource = dvhc.GetTinhTpho();
-            txtValue.Properties.DisplayMember = Tinh.ToString();
-            txtValue.Properties.ValueMember = Tinh.ToString();
+            
         }
         private void txtValue_EditValueChanged(object sender, EventArgs e)
         {

@@ -105,7 +105,11 @@ namespace BigAds.Frm
             {
                 try
                 {
-                    var Qre = $"SELECT * FROM dbo.DTuong WHERE DTuong_id = '{idSend}'";
+                    if (_conn.State == ConnectionState.Closed)
+                    {
+                        _conn.Open();
+                    }
+                    var Qre = $"delete dbo.DTuong WHERE DTuong_id = '{idSend}'";
                     SqlCommand InsertSQL = new SqlCommand(Qre, _conn);
                     InsertSQL.ExecuteNonQuery();
                     XtraMessageBox.Show("xóa thành công");

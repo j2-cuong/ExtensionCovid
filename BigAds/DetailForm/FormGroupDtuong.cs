@@ -80,6 +80,7 @@ namespace BigAds.FormDetail
                     SqlCommand InsertSQL = new SqlCommand(Qr, Conn);
                     InsertSQL.ExecuteNonQuery();
                     XtraMessageBox.Show("Sửa thành công");
+                    Close();
                 }
 
             }
@@ -93,17 +94,33 @@ namespace BigAds.FormDetail
 
         private void FormGroupDtuong_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.Editmode.Contains("2"))
+            try
             {
-                DataTable _data = LoadData.bindingGroupDTuong(idGrid);
-                if(_data.Rows.Count > 0)
+                if (Properties.Settings.Default.Editmode.Contains("2"))
                 {
-                    foreach (DataRow item in _data.Rows)
+                    if (!string.IsNullOrEmpty(idGrid))
                     {
-                        txtMa.Text = item["GroupDTuong_ma"].ToString();
-                        txtTen.Text = item["GroupDTuong_ten"].ToString();
+                        DataTable _data = LoadData.bindingGroupDTuong(idGrid);
+                        if (_data.Rows.Count > 0)
+                        {
+                            foreach (DataRow item in _data.Rows)
+                            {
+                                txtMa.Text = item["GroupDTuong_ma"].ToString();
+                                txtTen.Text = item["GroupDTuong_ten"].ToString();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Bạn chưa chọn mã cần thao tác");
+                        Close();
                     }
                 }
+            } 
+            catch (Exception e2)
+            {
+                XtraMessageBox.Show(e2.Message);
+                return;
             }
         }
     }

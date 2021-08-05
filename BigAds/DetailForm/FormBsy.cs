@@ -149,20 +149,35 @@ namespace BigAds.FormDetail
 
         private void FormBsy_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.Editmode.Contains("2"))
+            try
             {
-                DataTable _data = LoadData.bindingBsy(idGrid);
-                foreach (DataRow item in _data.Rows)
+                if (!string.IsNullOrEmpty(idGrid))
                 {
-                    txtmBsy.Text = !string.IsNullOrEmpty(item["DMBsy_Ma"].ToString()) ? item["DMBsy_Ma"].ToString() : null;
-                    txttenBsy.Text = !string.IsNullOrEmpty(item["DMBsy_Ten"].ToString()) ? item["DMBsy_Ten"].ToString() : null;
-                    txtDcBsy.Text = !string.IsNullOrEmpty(item["DMBsy_diaChi"].ToString()) ? item["DMBsy_diaChi"].ToString() : null;
-                    txtChuyenKhoa.Text = !string.IsNullOrEmpty(item["DMBsy_chuyenKhoa"].ToString()) ? item["DMBsy_chuyenKhoa"].ToString() : null;
-                    txtExp.Text = !string.IsNullOrEmpty(item["DMBsy_Exp"].ToString()) ? item["DMBsy_Exp"].ToString() : null;
-                    txtPhone.Text = !string.IsNullOrEmpty(item["DMBsy_Phone"].ToString()) ? item["DMBsy_Phone"].ToString() : null;
-                    txtbcap.Text = !string.IsNullOrEmpty(item["DMBsy_bangCap"].ToString()) ? item["DMBsy_bangCap"].ToString() : null;
+                    if (Properties.Settings.Default.Editmode.Contains("2"))
+                    {
+                        DataTable _data = LoadData.bindingBsy(idGrid);
+                        foreach (DataRow item in _data.Rows)
+                        {
+                            txtmBsy.Text = !string.IsNullOrEmpty(item["DMBsy_Ma"].ToString()) ? item["DMBsy_Ma"].ToString() : null;
+                            txttenBsy.Text = !string.IsNullOrEmpty(item["DMBsy_Ten"].ToString()) ? item["DMBsy_Ten"].ToString() : null;
+                            txtDcBsy.Text = !string.IsNullOrEmpty(item["DMBsy_diaChi"].ToString()) ? item["DMBsy_diaChi"].ToString() : null;
+                            txtChuyenKhoa.Text = !string.IsNullOrEmpty(item["DMBsy_chuyenKhoa"].ToString()) ? item["DMBsy_chuyenKhoa"].ToString() : null;
+                            txtExp.Text = !string.IsNullOrEmpty(item["DMBsy_Exp"].ToString()) ? item["DMBsy_Exp"].ToString() : null;
+                            txtPhone.Text = !string.IsNullOrEmpty(item["DMBsy_Phone"].ToString()) ? item["DMBsy_Phone"].ToString() : null;
+                            txtbcap.Text = !string.IsNullOrEmpty(item["DMBsy_bangCap"].ToString()) ? item["DMBsy_bangCap"].ToString() : null;
+                        }
+                    }
+                } else
+                {
+                    XtraMessageBox.Show("Bạn chưa chọn đối tượng cần thao tác");
                 }
+                
+            } catch (Exception eb)
+            {
+                XtraMessageBox.Show(eb.Message);
+                return;
             }
+            
         }
     }
 }

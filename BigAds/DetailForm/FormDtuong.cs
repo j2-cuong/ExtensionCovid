@@ -1,4 +1,4 @@
-﻿using BigAds.Services;
+﻿using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace BigAds.FormDetail
+namespace DataUseVaccine.FormDetail
 {
     public partial class FormDtuong : DevExpress.XtraEditors.XtraForm
     {

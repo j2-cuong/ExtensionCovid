@@ -1,11 +1,11 @@
-﻿using BigAds.FormDetail;
+﻿using DataUseVaccine.FormDetail;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     public partial class GridReport : DevExpress.XtraEditors.XtraUserControl
     {

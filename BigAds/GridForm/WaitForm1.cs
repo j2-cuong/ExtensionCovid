@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     public partial class WaitForm1 : WaitForm
     {

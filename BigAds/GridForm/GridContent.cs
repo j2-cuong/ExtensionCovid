@@ -1,5 +1,5 @@
-﻿using BigAds.FormDetail;
-using BigAds.Services;
+﻿using DataUseVaccine.FormDetail;
+using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     public partial class GridContent : DevExpress.XtraEditors.XtraUserControl
     {

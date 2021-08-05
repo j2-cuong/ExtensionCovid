@@ -1,5 +1,5 @@
 ﻿
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     partial class Login
     {
@@ -121,7 +121,7 @@ namespace BigAds.Frm
             this.button2.AutoEllipsis = true;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::BigAds.Properties.Resources.Icon_16x16;
+            this.button2.Image = global::DataUseVaccine.Properties.Resources.Icon_16x16;
             this.button2.Location = new System.Drawing.Point(351, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 23);
@@ -134,7 +134,7 @@ namespace BigAds.Frm
             this.button1.AutoEllipsis = true;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::BigAds.Properties.Resources._43__2_;
+            this.button1.Image = global::DataUseVaccine.Properties.Resources._43__2_;
             this.button1.Location = new System.Drawing.Point(387, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 23);
@@ -684,6 +684,7 @@ namespace BigAds.Frm
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Login.IconOptions.Image")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -2,11 +2,11 @@
 using DevExpress.XtraEditors;
 using System.Threading;
 using System.Windows.Forms;
-using BigAds.Frm;
+using DataUseVaccine.Frm;
 using System.Data.SqlClient;
 using System.Drawing;
 
-namespace BigAds
+namespace DataUseVaccine
 {
     public partial class frmDashboard : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {

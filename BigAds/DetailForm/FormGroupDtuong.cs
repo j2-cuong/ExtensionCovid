@@ -3,11 +3,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
-using BigAds.Services;
+using DataUseVaccine.Services;
 using System.Data;
 using DevExpress.XtraEditors;
 
-namespace BigAds.FormDetail
+namespace DataUseVaccine.FormDetail
 {
     public partial class FormGroupDtuong : DevExpress.XtraEditors.XtraForm
     {

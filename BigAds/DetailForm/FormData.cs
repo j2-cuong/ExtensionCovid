@@ -12,7 +12,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace BigAds.FormDetail
+namespace DataUseVaccine.FormDetail
 {
     public partial class FormData : DevExpress.XtraEditors.XtraForm
     {

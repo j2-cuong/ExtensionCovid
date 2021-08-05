@@ -1,5 +1,5 @@
 ﻿
-namespace BigAds.FormDetail
+namespace DataUseVaccine.FormDetail
 {
     partial class FormGroupDtuong
     {
@@ -97,7 +97,7 @@ namespace BigAds.FormDetail
             this.button2.AutoEllipsis = true;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::BigAds.Properties.Resources.Icon_16x16;
+            this.button2.Image = global::DataUseVaccine.Properties.Resources.Icon_16x16;
             this.button2.Location = new System.Drawing.Point(355, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 23);
@@ -110,7 +110,7 @@ namespace BigAds.FormDetail
             this.button1.AutoEllipsis = true;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::BigAds.Properties.Resources._43__2_;
+            this.button1.Image = global::DataUseVaccine.Properties.Resources._43__2_;
             this.button1.Location = new System.Drawing.Point(391, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 23);
@@ -491,6 +491,7 @@ namespace BigAds.FormDetail
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FormGroupDtuong.IconOptions.Image")));
             this.Name = "FormGroupDtuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUser";

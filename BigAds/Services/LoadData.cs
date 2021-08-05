@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BigAds.Services
+namespace DataUseVaccine.Services
 {
     public class LoadData
     {

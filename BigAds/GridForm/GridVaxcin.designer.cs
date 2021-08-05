@@ -1,5 +1,5 @@
 ﻿
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     partial class GridVaxcin
     {

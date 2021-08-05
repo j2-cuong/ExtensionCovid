@@ -1,4 +1,4 @@
-﻿using BigAds.Services;
+﻿using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BigAds.FormDetail
+namespace DataUseVaccine.FormDetail
 {
     public partial class FormBsy : DevExpress.XtraEditors.XtraForm
     {

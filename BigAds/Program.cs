@@ -1,8 +1,8 @@
-﻿using BigAds.Frm;
+﻿using DataUseVaccine.Frm;
 using System;
 using System.Windows.Forms;
 
-namespace BigAds
+namespace DataUseVaccine
 {
     static class Program
     {

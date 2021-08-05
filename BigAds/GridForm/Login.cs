@@ -1,4 +1,4 @@
-﻿using BigAds.FormDetail;
+﻿using DataUseVaccine.FormDetail;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {

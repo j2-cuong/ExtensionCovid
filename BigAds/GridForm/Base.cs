@@ -1,5 +1,5 @@
 ﻿
-using BigAds.Services;
+using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     public partial class Base : DevExpress.XtraEditors.XtraForm
     {

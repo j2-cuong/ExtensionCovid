@@ -1,5 +1,5 @@
 ﻿
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     partial class Base
     {
@@ -53,7 +53,7 @@ namespace BigAds.Frm
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BigAds.Frm.WaitForm1), true, true);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::DataUseVaccine.Frm.WaitForm1), true, true);
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.txtServer = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUserSQL = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -729,7 +729,7 @@ namespace BigAds.Frm
             this.button1.AutoEllipsis = true;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::BigAds.Properties.Resources._43__2_;
+            this.button1.Image = global::DataUseVaccine.Properties.Resources._43__2_;
             this.button1.Location = new System.Drawing.Point(392, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 23);
@@ -742,7 +742,7 @@ namespace BigAds.Frm
             this.button2.AutoEllipsis = true;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::BigAds.Properties.Resources.Icon_16x16;
+            this.button2.Image = global::DataUseVaccine.Properties.Resources.Icon_16x16;
             this.button2.Location = new System.Drawing.Point(356, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 23);
@@ -769,6 +769,7 @@ namespace BigAds.Frm
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Base.IconOptions.Image")));
             this.Name = "Base";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base";

@@ -1,5 +1,5 @@
-﻿using BigAds.FormDetail;
-using BigAds.Services;
+﻿using DataUseVaccine.FormDetail;
+using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
 using Newtonsoft.Json.Linq;
 using System;
@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace BigAds.Frm
+namespace DataUseVaccine.Frm
 {
     public partial class GridGroupDt : DevExpress.XtraEditors.XtraUserControl
     {

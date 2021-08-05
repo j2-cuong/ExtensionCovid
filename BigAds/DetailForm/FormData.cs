@@ -39,7 +39,6 @@ namespace DataUseVaccine.FormDetail
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
             _conn.Open();
-            BackColor = Color.FromArgb(244, 245, 247);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +54,11 @@ namespace DataUseVaccine.FormDetail
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

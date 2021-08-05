@@ -33,15 +33,17 @@ namespace DataUseVaccine.Frm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Guid ID = new Guid();
+            Guid ID = Guid.NewGuid();
+            var time_ = DateTime.Now;
             Configs.UpdateSettingAppConfig("Editmode", "1");
-            FormData _f = new FormData(ID.ToString());
+            FormData _f = new FormData(ID.ToString(), time_);
             _f.ShowDialog();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             var idSend = "";
+            var time_ = DateTime.Now;
             foreach (var item in gridView1.GetSelectedRows())
             {
                 DataRowView a = (DataRowView)gridView1.GetRow(item);
@@ -50,7 +52,7 @@ namespace DataUseVaccine.Frm
             }
 
             Configs.UpdateSettingAppConfig("Editmode", "2");
-            FormData _frmCm = new FormData(idSend);
+            FormData _frmCm = new FormData(idSend , time_);
             _frmCm.ShowDialog();
         }
 

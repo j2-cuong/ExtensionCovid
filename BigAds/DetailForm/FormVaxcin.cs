@@ -100,12 +100,14 @@ namespace DataUseVaccine.FormDetail
                     else
                     {
                         var _time = bunifuDatePicker1.Value.ToString();
+                        var _time2 = txtNgayNhap.Value.ToString();
                         var Qr = $"INSERT INTO dbo.VacXin VALUES  ( NEWID() , " +
                             $"N'{vx_ma.Text.Trim()}' , " +
                             $"N'{vx_ten.Text.Trim()}' , " +
                             $"N'{vx_nsx.Text.Trim()}' , " +
                             $"N'{vx_location.Text.Trim()}' , " +
                             $"N'{vx_lo.Text.Trim()}' , " +
+                            $"N'{_time2}' ," +
                             $"N'{_time}' ," +
                             $"{vx_slNhap.Text.Trim()} , " +
                             $"0 )";
@@ -150,11 +152,13 @@ namespace DataUseVaccine.FormDetail
                     else
                     {
                         var _time = bunifuDatePicker1.Value.ToString();
+                        var _time2 = txtNgayNhap.Value.ToString();
                         var Qr = $"Update dbo.VacXin set   " +
                             $"vx_ten=N'{vx_ten.Text.Trim()}' , " +
                             $"vx_nsx=N'{vx_nsx.Text.Trim()}' , " +
                             $"vx_location=N'{vx_location.Text.Trim()}' , " +
                             $"vx_lo=N'{vx_lo.Text.Trim()}' , " +
+                            $"vx_ngayNhap=N'{_time2}' ," +
                             $"vx_hsd=N'{_time}' ," +
                             $"vx_slNhap={vx_slNhap.Text.Trim()} , ";
                         SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
@@ -188,6 +192,7 @@ namespace DataUseVaccine.FormDetail
                             vx_nsx.Text = !string.IsNullOrEmpty(item["vx_nsx"].ToString()) ? item["vx_nsx"].ToString() : null;
                             vx_location.Text = !string.IsNullOrEmpty(item["vx_location"].ToString()) ? item["vx_location"].ToString() : null;
                             vx_lo.Text = !string.IsNullOrEmpty(item["vx_lo"].ToString()) ? item["vx_lo"].ToString() : null;
+                            txtNgayNhap.Text = !string.IsNullOrEmpty(item["vx_ngayNhap"].ToString()) ? item["vx_ngayNhap"].ToString() : null;
                             bunifuDatePicker1.Text = !string.IsNullOrEmpty(item["vx_hsd"].ToString()) ? item["vx_hsd"].ToString() : null;
                             vx_slNhap.Text = !string.IsNullOrEmpty(item["vx_slNhap"].ToString()) ? item["vx_slNhap"].ToString() : null;
                         }

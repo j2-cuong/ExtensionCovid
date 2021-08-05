@@ -39,15 +39,16 @@ namespace DataUseVaccine.Frm
             this.vx_ma = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_nsx = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.vx_location = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_lo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_hsd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_slNhap = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx__slXuat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.vx_ngayNhap = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -85,6 +86,7 @@ namespace DataUseVaccine.Frm
             this.vx_nsx,
             this.vx_location,
             this.vx_lo,
+            this.vx_ngayNhap,
             this.vx_hsd,
             this.vx_slNhap,
             this.vx__slXuat});
@@ -131,8 +133,62 @@ namespace DataUseVaccine.Frm
             this.vx_nsx.Name = "vx_nsx";
             this.vx_nsx.OptionsColumn.ReadOnly = true;
             this.vx_nsx.Visible = true;
-            this.vx_nsx.VisibleIndex = 8;
+            this.vx_nsx.VisibleIndex = 3;
             this.vx_nsx.Width = 250;
+            // 
+            // vx_location
+            // 
+            this.vx_location.Caption = "Nước sx";
+            this.vx_location.FieldName = "vx_location";
+            this.vx_location.Name = "vx_location";
+            this.vx_location.OptionsColumn.ReadOnly = true;
+            this.vx_location.Visible = true;
+            this.vx_location.VisibleIndex = 4;
+            this.vx_location.Width = 250;
+            // 
+            // vx_lo
+            // 
+            this.vx_lo.Caption = "Lô";
+            this.vx_lo.FieldName = "vx_lo";
+            this.vx_lo.Name = "vx_lo";
+            this.vx_lo.OptionsColumn.ReadOnly = true;
+            this.vx_lo.Visible = true;
+            this.vx_lo.VisibleIndex = 5;
+            this.vx_lo.Width = 150;
+            // 
+            // vx_hsd
+            // 
+            this.vx_hsd.Caption = "Hạn SD";
+            this.vx_hsd.DisplayFormat.FormatString = "dd - MM - yyyy";
+            this.vx_hsd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.vx_hsd.FieldName = "vx_hsd";
+            this.vx_hsd.Name = "vx_hsd";
+            this.vx_hsd.OptionsColumn.ReadOnly = true;
+            this.vx_hsd.Visible = true;
+            this.vx_hsd.VisibleIndex = 7;
+            this.vx_hsd.Width = 150;
+            // 
+            // vx_slNhap
+            // 
+            this.vx_slNhap.Caption = "SL nhập";
+            this.vx_slNhap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.vx_slNhap.FieldName = "vx_slNhap";
+            this.vx_slNhap.Name = "vx_slNhap";
+            this.vx_slNhap.OptionsColumn.ReadOnly = true;
+            this.vx_slNhap.Visible = true;
+            this.vx_slNhap.VisibleIndex = 8;
+            this.vx_slNhap.Width = 150;
+            // 
+            // vx__slXuat
+            // 
+            this.vx__slXuat.Caption = "SL xuất";
+            this.vx__slXuat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.vx__slXuat.FieldName = "vx__slXuat";
+            this.vx__slXuat.Name = "vx__slXuat";
+            this.vx__slXuat.OptionsColumn.ReadOnly = true;
+            this.vx__slXuat.Visible = true;
+            this.vx__slXuat.VisibleIndex = 9;
+            this.vx__slXuat.Width = 150;
             // 
             // groupControl1
             // 
@@ -423,59 +479,16 @@ namespace DataUseVaccine.Frm
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // vx_location
+            // vx_ngayNhap
             // 
-            this.vx_location.Caption = "Nước sx";
-            this.vx_location.FieldName = "vx_location";
-            this.vx_location.Name = "vx_location";
-            this.vx_location.OptionsColumn.ReadOnly = true;
-            this.vx_location.Visible = true;
-            this.vx_location.VisibleIndex = 3;
-            this.vx_location.Width = 250;
-            // 
-            // vx_lo
-            // 
-            this.vx_lo.Caption = "Lô";
-            this.vx_lo.FieldName = "vx_lo";
-            this.vx_lo.Name = "vx_lo";
-            this.vx_lo.OptionsColumn.ReadOnly = true;
-            this.vx_lo.Visible = true;
-            this.vx_lo.VisibleIndex = 4;
-            this.vx_lo.Width = 150;
-            // 
-            // vx_hsd
-            // 
-            this.vx_hsd.Caption = "Hạn SD";
-            this.vx_hsd.DisplayFormat.FormatString = "dd - MM - yyyy";
-            this.vx_hsd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.vx_hsd.FieldName = "vx_hsd";
-            this.vx_hsd.Name = "vx_hsd";
-            this.vx_hsd.OptionsColumn.ReadOnly = true;
-            this.vx_hsd.Visible = true;
-            this.vx_hsd.VisibleIndex = 5;
-            this.vx_hsd.Width = 150;
-            // 
-            // vx_slNhap
-            // 
-            this.vx_slNhap.Caption = "SL nhập";
-            this.vx_slNhap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.vx_slNhap.FieldName = "vx_slNhap";
-            this.vx_slNhap.Name = "vx_slNhap";
-            this.vx_slNhap.OptionsColumn.ReadOnly = true;
-            this.vx_slNhap.Visible = true;
-            this.vx_slNhap.VisibleIndex = 6;
-            this.vx_slNhap.Width = 150;
-            // 
-            // vx__slXuat
-            // 
-            this.vx__slXuat.Caption = "SL xuất";
-            this.vx__slXuat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.vx__slXuat.FieldName = "vx__slXuat";
-            this.vx__slXuat.Name = "vx__slXuat";
-            this.vx__slXuat.OptionsColumn.ReadOnly = true;
-            this.vx__slXuat.Visible = true;
-            this.vx__slXuat.VisibleIndex = 7;
-            this.vx__slXuat.Width = 150;
+            this.vx_ngayNhap.Caption = "Ngày nhập";
+            this.vx_ngayNhap.DisplayFormat.FormatString = "dd - MM - yyyy";
+            this.vx_ngayNhap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.vx_ngayNhap.FieldName = "vx_ngayNhap";
+            this.vx_ngayNhap.Name = "vx_ngayNhap";
+            this.vx_ngayNhap.Visible = true;
+            this.vx_ngayNhap.VisibleIndex = 6;
+            this.vx_ngayNhap.Width = 150;
             // 
             // GridVaxcin
             // 
@@ -511,5 +524,6 @@ namespace DataUseVaccine.Frm
         private DevExpress.XtraGrid.Columns.GridColumn vx_hsd;
         private DevExpress.XtraGrid.Columns.GridColumn vx_slNhap;
         private DevExpress.XtraGrid.Columns.GridColumn vx__slXuat;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ngayNhap;
     }
 }

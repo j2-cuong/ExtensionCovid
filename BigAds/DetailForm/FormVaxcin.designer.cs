@@ -82,6 +82,8 @@ namespace DataUseVaccine.FormDetail
             this.vx_slNhap = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.txtNgayNhap = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -680,7 +682,7 @@ namespace DataUseVaccine.FormDetail
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(265, 129);
+            this.label6.Location = new System.Drawing.Point(265, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 50;
@@ -797,7 +799,7 @@ namespace DataUseVaccine.FormDetail
             this.vx__slXuat.IconRight = null;
             this.vx__slXuat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.vx__slXuat.Lines = new string[0];
-            this.vx__slXuat.Location = new System.Drawing.Point(357, 163);
+            this.vx__slXuat.Location = new System.Drawing.Point(97, 207);
             this.vx__slXuat.MaxLength = 32767;
             this.vx__slXuat.MinimumSize = new System.Drawing.Size(1, 1);
             this.vx__slXuat.Modified = false;
@@ -833,7 +835,7 @@ namespace DataUseVaccine.FormDetail
             this.vx__slXuat.SelectionLength = 0;
             this.vx__slXuat.SelectionStart = 0;
             this.vx__slXuat.ShortcutsEnabled = true;
-            this.vx__slXuat.Size = new System.Drawing.Size(247, 37);
+            this.vx__slXuat.Size = new System.Drawing.Size(166, 37);
             this.vx__slXuat.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.vx__slXuat.TabIndex = 55;
             this.vx__slXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -848,7 +850,7 @@ namespace DataUseVaccine.FormDetail
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(265, 172);
+            this.label8.Location = new System.Drawing.Point(12, 217);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 16);
             this.label8.TabIndex = 54;
@@ -959,18 +961,57 @@ namespace DataUseVaccine.FormDetail
             this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(357, 120);
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(357, 163);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(247, 32);
             this.bunifuDatePicker1.TabIndex = 56;
             this.bunifuDatePicker1.Value = new System.DateTime(2021, 8, 5, 9, 19, 0, 0);
             // 
+            // txtNgayNhap
+            // 
+            this.txtNgayNhap.BackColor = System.Drawing.Color.Transparent;
+            this.txtNgayNhap.BorderRadius = 13;
+            this.txtNgayNhap.Color = System.Drawing.Color.Silver;
+            this.txtNgayNhap.CustomFormat = "dd - MM - yyyy";
+            this.txtNgayNhap.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.txtNgayNhap.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.txtNgayNhap.DisabledColor = System.Drawing.Color.Gray;
+            this.txtNgayNhap.DisplayWeekNumbers = false;
+            this.txtNgayNhap.DPHeight = 0;
+            this.txtNgayNhap.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtNgayNhap.FillDatePicker = false;
+            this.txtNgayNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNgayNhap.ForeColor = System.Drawing.Color.Black;
+            this.txtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgayNhap.Icon = ((System.Drawing.Image)(resources.GetObject("txtNgayNhap.Icon")));
+            this.txtNgayNhap.IconColor = System.Drawing.Color.Gray;
+            this.txtNgayNhap.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.txtNgayNhap.LeftTextMargin = 5;
+            this.txtNgayNhap.Location = new System.Drawing.Point(357, 125);
+            this.txtNgayNhap.MinimumSize = new System.Drawing.Size(4, 32);
+            this.txtNgayNhap.Name = "txtNgayNhap";
+            this.txtNgayNhap.Size = new System.Drawing.Size(247, 32);
+            this.txtNgayNhap.TabIndex = 58;
+            this.txtNgayNhap.Value = new System.DateTime(2021, 8, 5, 9, 19, 0, 0);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(265, 134);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 16);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "Ngày nhập";
+            // 
             // FormVaxcin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 254);
+            this.Controls.Add(this.txtNgayNhap);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.bunifuDatePicker1);
             this.Controls.Add(this.vx__slXuat);
             this.Controls.Add(this.label8);
@@ -1026,5 +1067,7 @@ namespace DataUseVaccine.FormDetail
         private Bunifu.UI.WinForms.BunifuTextBox vx_ma;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
+        private Bunifu.UI.WinForms.BunifuDatePicker txtNgayNhap;
+        private System.Windows.Forms.Label label10;
     }
 }

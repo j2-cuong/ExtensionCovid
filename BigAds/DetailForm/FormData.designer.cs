@@ -225,17 +225,28 @@ namespace DataUseVaccine.FormDetail
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.txtTimeTiem1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label41 = new System.Windows.Forms.Label();
             this.searchLookUpEdit3 = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_lo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ngayNhap = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_Ma1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTimeNhap1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -261,7 +272,26 @@ namespace DataUseVaccine.FormDetail
             this.label32 = new System.Windows.Forms.Label();
             this.vx_nsx1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.searchLookUpEdit5 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.searchLookUpEdit4 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.txtTimeTiem2 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label43 = new System.Windows.Forms.Label();
@@ -296,6 +326,14 @@ namespace DataUseVaccine.FormDetail
             this.DTuong_ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DTuong_nsinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
@@ -304,6 +342,10 @@ namespace DataUseVaccine.FormDetail
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
@@ -1694,7 +1736,7 @@ namespace DataUseVaccine.FormDetail
             this.txtMaDT.IconRight = null;
             this.txtMaDT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaDT.Lines = new string[0];
-            this.txtMaDT.Location = new System.Drawing.Point(91, 51);
+            this.txtMaDT.Location = new System.Drawing.Point(93, 51);
             this.txtMaDT.MaxLength = 32767;
             this.txtMaDT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMaDT.Modified = false;
@@ -1730,7 +1772,7 @@ namespace DataUseVaccine.FormDetail
             this.txtMaDT.SelectionLength = 0;
             this.txtMaDT.SelectionStart = 0;
             this.txtMaDT.ShortcutsEnabled = true;
-            this.txtMaDT.Size = new System.Drawing.Size(168, 37);
+            this.txtMaDT.Size = new System.Drawing.Size(166, 37);
             this.txtMaDT.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMaDT.TabIndex = 136;
             this.txtMaDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1746,7 +1788,7 @@ namespace DataUseVaccine.FormDetail
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(6, 63);
+            this.label3.Location = new System.Drawing.Point(2, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 133;
@@ -1764,6 +1806,15 @@ namespace DataUseVaccine.FormDetail
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.label57);
+            this.panelControl1.Controls.Add(this.label58);
+            this.panelControl1.Controls.Add(this.label59);
+            this.panelControl1.Controls.Add(this.label51);
+            this.panelControl1.Controls.Add(this.label52);
+            this.panelControl1.Controls.Add(this.label47);
+            this.panelControl1.Controls.Add(this.label53);
+            this.panelControl1.Controls.Add(this.label46);
+            this.panelControl1.Controls.Add(this.label45);
             this.panelControl1.Controls.Add(this.label42);
             this.panelControl1.Controls.Add(this.txtTimeTiem1);
             this.panelControl1.Controls.Add(this.searchLookUpEdit1);
@@ -1798,6 +1849,105 @@ namespace DataUseVaccine.FormDetail
             this.panelControl1.Size = new System.Drawing.Size(710, 346);
             this.panelControl1.TabIndex = 170;
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Red;
+            this.label57.Location = new System.Drawing.Point(97, 184);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(14, 18);
+            this.label57.TabIndex = 222;
+            this.label57.Text = ")";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Red;
+            this.label58.Location = new System.Drawing.Point(66, 184);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(19, 18);
+            this.label58.TabIndex = 221;
+            this.label58.Text = "( ";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.Red;
+            this.label59.Location = new System.Drawing.Point(82, 187);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(15, 18);
+            this.label59.TabIndex = 220;
+            this.label59.Text = "*";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.Red;
+            this.label51.Location = new System.Drawing.Point(90, 56);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(14, 18);
+            this.label51.TabIndex = 219;
+            this.label51.Text = ")";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.Red;
+            this.label52.Location = new System.Drawing.Point(59, 56);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(19, 18);
+            this.label52.TabIndex = 218;
+            this.label52.Text = "( ";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Red;
+            this.label47.Location = new System.Drawing.Point(87, 307);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(14, 18);
+            this.label47.TabIndex = 204;
+            this.label47.Text = ")";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.Red;
+            this.label53.Location = new System.Drawing.Point(75, 59);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(15, 18);
+            this.label53.TabIndex = 217;
+            this.label53.Text = "*";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Red;
+            this.label46.Location = new System.Drawing.Point(56, 307);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(19, 18);
+            this.label46.TabIndex = 203;
+            this.label46.Text = "( ";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Red;
+            this.label45.Location = new System.Drawing.Point(72, 310);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(15, 18);
+            this.label45.TabIndex = 202;
+            this.label45.Text = "*";
+            // 
             // label42
             // 
             this.label42.AutoSize = true;
@@ -1812,20 +1962,21 @@ namespace DataUseVaccine.FormDetail
             // 
             this.txtTimeTiem1.BackColor = System.Drawing.Color.Transparent;
             this.txtTimeTiem1.BorderRadius = 8;
-            this.txtTimeTiem1.Color = System.Drawing.Color.Silver;
-            this.txtTimeTiem1.CustomFormat = "dd - MM - yyyy     hh:mm:ss";
+            this.txtTimeTiem1.Color = System.Drawing.Color.Gray;
+            this.txtTimeTiem1.CustomFormat = "dd- MM- yyyy  HH:mm:ss  tt";
             this.txtTimeTiem1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.txtTimeTiem1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.txtTimeTiem1.DisabledColor = System.Drawing.Color.Gray;
             this.txtTimeTiem1.DisplayWeekNumbers = false;
             this.txtTimeTiem1.DPHeight = 0;
             this.txtTimeTiem1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtTimeTiem1.Enabled = false;
             this.txtTimeTiem1.FillDatePicker = false;
             this.txtTimeTiem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimeTiem1.ForeColor = System.Drawing.Color.Black;
             this.txtTimeTiem1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtTimeTiem1.Icon = ((System.Drawing.Image)(resources.GetObject("txtTimeTiem1.Icon")));
-            this.txtTimeTiem1.IconColor = System.Drawing.Color.Gray;
+            this.txtTimeTiem1.IconColor = System.Drawing.Color.Black;
             this.txtTimeTiem1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.txtTimeTiem1.LeftTextMargin = 5;
             this.txtTimeTiem1.Location = new System.Drawing.Point(453, 179);
@@ -1846,38 +1997,39 @@ namespace DataUseVaccine.FormDetail
             this.searchLookUpEdit1.Properties.PopupView = this.gridView1;
             this.searchLookUpEdit1.Size = new System.Drawing.Size(18, 20);
             this.searchLookUpEdit1.TabIndex = 199;
+            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2});
+            this.DMBsy_Ma,
+            this.DMBsy_Ten});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // DMBsy_Ma
             // 
-            this.gridColumn1.Caption = "Tỉnh( T/p)";
-            this.gridColumn1.FieldName = "Tinh";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.DMBsy_Ma.Caption = "Mã Bsy";
+            this.DMBsy_Ma.FieldName = "DMBsy_Ma";
+            this.DMBsy_Ma.Name = "DMBsy_Ma";
+            this.DMBsy_Ma.Visible = true;
+            this.DMBsy_Ma.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // DMBsy_Ten
             // 
-            this.gridColumn2.Caption = "Mã Tỉnh";
-            this.gridColumn2.FieldName = "TinhCode";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.DMBsy_Ten.Caption = "Tên Bsy";
+            this.DMBsy_Ten.FieldName = "DMBsy_Ten";
+            this.DMBsy_Ten.Name = "DMBsy_Ten";
+            this.DMBsy_Ten.Visible = true;
+            this.DMBsy_Ten.VisibleIndex = 1;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(11, 51);
+            this.label41.Location = new System.Drawing.Point(3, 51);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(63, 32);
             this.label41.TabIndex = 198;
@@ -1894,32 +2046,51 @@ namespace DataUseVaccine.FormDetail
             this.searchLookUpEdit3.Properties.PopupView = this.gridView3;
             this.searchLookUpEdit3.Size = new System.Drawing.Size(18, 20);
             this.searchLookUpEdit3.TabIndex = 197;
+            this.searchLookUpEdit3.EditValueChanged += new System.EventHandler(this.searchLookUpEdit3_EditValueChanged);
             // 
             // gridView3
             // 
             this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn5,
-            this.gridColumn6});
+            this.vx_ma,
+            this.vx_ten,
+            this.vx_lo,
+            this.vx_ngayNhap});
             this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn5
+            // vx_ma
             // 
-            this.gridColumn5.Caption = "Tỉnh( T/p)";
-            this.gridColumn5.FieldName = "Tinh";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 0;
+            this.vx_ma.Caption = "Mã Vx";
+            this.vx_ma.FieldName = "vx_ma";
+            this.vx_ma.Name = "vx_ma";
+            this.vx_ma.Visible = true;
+            this.vx_ma.VisibleIndex = 0;
             // 
-            // gridColumn6
+            // vx_ten
             // 
-            this.gridColumn6.Caption = "Mã Tỉnh";
-            this.gridColumn6.FieldName = "TinhCode";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 1;
+            this.vx_ten.Caption = "Tên Vx";
+            this.vx_ten.FieldName = "vx_ten";
+            this.vx_ten.Name = "vx_ten";
+            this.vx_ten.Visible = true;
+            this.vx_ten.VisibleIndex = 1;
+            // 
+            // vx_lo
+            // 
+            this.vx_lo.Caption = "Lô nhập";
+            this.vx_lo.FieldName = "vx_lo";
+            this.vx_lo.Name = "vx_lo";
+            this.vx_lo.Visible = true;
+            this.vx_lo.VisibleIndex = 2;
+            // 
+            // vx_ngayNhap
+            // 
+            this.vx_ngayNhap.Caption = "Ngày nhập";
+            this.vx_ngayNhap.FieldName = "vx_ngayNhap";
+            this.vx_ngayNhap.Name = "vx_ngayNhap";
+            this.vx_ngayNhap.Visible = true;
+            this.vx_ngayNhap.VisibleIndex = 3;
             // 
             // vx_Ma1
             // 
@@ -1994,6 +2165,7 @@ namespace DataUseVaccine.FormDetail
             this.vx_Ma1.TextPlaceholder = "Enter text";
             this.vx_Ma1.UseSystemPasswordChar = false;
             this.vx_Ma1.WordWrap = true;
+            this.vx_Ma1.TextChanged += new System.EventHandler(this.vx_Ma1_TextChanged);
             // 
             // txtTimeNhap1
             // 
@@ -2682,7 +2854,7 @@ namespace DataUseVaccine.FormDetail
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(11, 185);
+            this.label24.Location = new System.Drawing.Point(3, 186);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(65, 16);
             this.label24.TabIndex = 178;
@@ -2845,6 +3017,7 @@ namespace DataUseVaccine.FormDetail
             this.txttenBsy1.TextPlaceholder = "Enter text";
             this.txttenBsy1.UseSystemPasswordChar = false;
             this.txttenBsy1.WordWrap = true;
+            this.txttenBsy1.TextChanged += new System.EventHandler(this.txttenBsy1_TextChanged);
             // 
             // label32
             // 
@@ -2932,7 +3105,18 @@ namespace DataUseVaccine.FormDetail
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.searchLookUpEdit5);
+            this.panelControl2.Controls.Add(this.searchLookUpEdit4);
+            this.panelControl2.Controls.Add(this.label60);
+            this.panelControl2.Controls.Add(this.label61);
+            this.panelControl2.Controls.Add(this.label62);
+            this.panelControl2.Controls.Add(this.label54);
+            this.panelControl2.Controls.Add(this.label55);
+            this.panelControl2.Controls.Add(this.label56);
+            this.panelControl2.Controls.Add(this.label48);
+            this.panelControl2.Controls.Add(this.label49);
             this.panelControl2.Controls.Add(this.label44);
+            this.panelControl2.Controls.Add(this.label50);
             this.panelControl2.Controls.Add(this.label36);
             this.panelControl2.Controls.Add(this.txtTimeTiem2);
             this.panelControl2.Controls.Add(this.label43);
@@ -2964,6 +3148,190 @@ namespace DataUseVaccine.FormDetail
             this.panelControl2.Size = new System.Drawing.Size(714, 346);
             this.panelControl2.TabIndex = 171;
             // 
+            // searchLookUpEdit5
+            // 
+            this.searchLookUpEdit5.EditValue = "";
+            this.searchLookUpEdit5.Location = new System.Drawing.Point(334, 183);
+            this.searchLookUpEdit5.Name = "searchLookUpEdit5";
+            this.searchLookUpEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit5.Properties.NullText = "";
+            this.searchLookUpEdit5.Properties.PopupView = this.gridView5;
+            this.searchLookUpEdit5.Size = new System.Drawing.Size(18, 20);
+            this.searchLookUpEdit5.TabIndex = 223;
+            this.searchLookUpEdit5.EditValueChanged += new System.EventHandler(this.searchLookUpEdit5_EditValueChanged);
+            // 
+            // gridView5
+            // 
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn6,
+            this.gridColumn7});
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Mã Bsy";
+            this.gridColumn6.FieldName = "DMBsy_Ma";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 0;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Tên Bsy";
+            this.gridColumn7.FieldName = "DMBsy_Ten";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 1;
+            // 
+            // searchLookUpEdit4
+            // 
+            this.searchLookUpEdit4.EditValue = "";
+            this.searchLookUpEdit4.Location = new System.Drawing.Point(325, 54);
+            this.searchLookUpEdit4.Name = "searchLookUpEdit4";
+            this.searchLookUpEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit4.Properties.NullText = "";
+            this.searchLookUpEdit4.Properties.PopupView = this.gridView4;
+            this.searchLookUpEdit4.Size = new System.Drawing.Size(18, 20);
+            this.searchLookUpEdit4.TabIndex = 223;
+            this.searchLookUpEdit4.EditValueChanged += new System.EventHandler(this.searchLookUpEdit4_EditValueChanged);
+            // 
+            // gridView4
+            // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn4,
+            this.gridColumn5});
+            this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView4.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã Vx";
+            this.gridColumn1.FieldName = "vx_ma";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên Vx";
+            this.gridColumn2.FieldName = "vx_ten";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Lô nhập";
+            this.gridColumn4.FieldName = "vx_lo";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Ngày nhập";
+            this.gridColumn5.FieldName = "vx_ngayNhap";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.Red;
+            this.label60.Location = new System.Drawing.Point(99, 183);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(14, 18);
+            this.label60.TabIndex = 222;
+            this.label60.Text = ")";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Red;
+            this.label61.Location = new System.Drawing.Point(68, 183);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(19, 18);
+            this.label61.TabIndex = 221;
+            this.label61.Text = "( ";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.Red;
+            this.label62.Location = new System.Drawing.Point(84, 186);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(15, 18);
+            this.label62.TabIndex = 220;
+            this.label62.Text = "*";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.Red;
+            this.label54.Location = new System.Drawing.Point(95, 56);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(14, 18);
+            this.label54.TabIndex = 219;
+            this.label54.Text = ")";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.Red;
+            this.label55.Location = new System.Drawing.Point(64, 56);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(19, 18);
+            this.label55.TabIndex = 218;
+            this.label55.Text = "( ";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.Red;
+            this.label56.Location = new System.Drawing.Point(80, 59);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(15, 18);
+            this.label56.TabIndex = 217;
+            this.label56.Text = "*";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Red;
+            this.label48.Location = new System.Drawing.Point(94, 310);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(14, 18);
+            this.label48.TabIndex = 207;
+            this.label48.Text = ")";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Red;
+            this.label49.Location = new System.Drawing.Point(63, 310);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(19, 18);
+            this.label49.TabIndex = 206;
+            this.label49.Text = "( ";
+            // 
             // label44
             // 
             this.label44.AutoSize = true;
@@ -2973,6 +3341,17 @@ namespace DataUseVaccine.FormDetail
             this.label44.Size = new System.Drawing.Size(63, 32);
             this.label44.TabIndex = 202;
             this.label44.Text = "   Tên \r\nVaxcine";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Red;
+            this.label50.Location = new System.Drawing.Point(79, 313);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(15, 18);
+            this.label50.TabIndex = 205;
+            this.label50.Text = "*";
             // 
             // label36
             // 
@@ -3015,7 +3394,7 @@ namespace DataUseVaccine.FormDetail
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(15, 185);
+            this.label43.Location = new System.Drawing.Point(6, 185);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(65, 16);
             this.label43.TabIndex = 213;
@@ -3094,12 +3473,13 @@ namespace DataUseVaccine.FormDetail
             this.txttenBsy2.TextPlaceholder = "Enter text";
             this.txttenBsy2.UseSystemPasswordChar = false;
             this.txttenBsy2.WordWrap = true;
+            this.txttenBsy2.TextChanged += new System.EventHandler(this.txttenBsy2_TextChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(15, 51);
+            this.label18.Location = new System.Drawing.Point(7, 51);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 32);
             this.label18.TabIndex = 200;
@@ -3252,6 +3632,7 @@ namespace DataUseVaccine.FormDetail
             this.vx_ma2.TextPlaceholder = "Enter text";
             this.vx_ma2.UseSystemPasswordChar = false;
             this.vx_ma2.WordWrap = true;
+            this.vx_ma2.TextChanged += new System.EventHandler(this.vx_ma2_TextChanged);
             // 
             // label40
             // 
@@ -4165,6 +4546,92 @@ namespace DataUseVaccine.FormDetail
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.Red;
+            this.label63.Location = new System.Drawing.Point(50, 556);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(19, 18);
+            this.label63.TabIndex = 225;
+            this.label63.Text = ") ";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.Red;
+            this.label64.Location = new System.Drawing.Point(19, 556);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(19, 18);
+            this.label64.TabIndex = 224;
+            this.label64.Text = "( ";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.Red;
+            this.label65.Location = new System.Drawing.Point(35, 559);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(15, 18);
+            this.label65.TabIndex = 223;
+            this.label65.Text = "*";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(68, 559);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(194, 16);
+            this.label66.TabIndex = 223;
+            this.label66.Text = "Ký hiệu bắt buộc phải nhập";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(67, 579);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(450, 16);
+            this.label67.TabIndex = 226;
+            this.label67.Text = "Các ô tô màu xám chỉ được phép xem. Không có quyền chỉnh sửa";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.Red;
+            this.label68.Location = new System.Drawing.Point(80, 59);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(14, 18);
+            this.label68.TabIndex = 225;
+            this.label68.Text = ")";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.Red;
+            this.label69.Location = new System.Drawing.Point(49, 59);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(19, 18);
+            this.label69.TabIndex = 224;
+            this.label69.Text = "( ";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.Red;
+            this.label70.Location = new System.Drawing.Point(65, 62);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(15, 18);
+            this.label70.TabIndex = 223;
+            this.label70.Text = "*";
+            // 
             // FormData
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(148)))), ((int)(((byte)(158)))));
@@ -4172,8 +4639,16 @@ namespace DataUseVaccine.FormDetail
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1457, 601);
+            this.Controls.Add(this.label68);
+            this.Controls.Add(this.label67);
+            this.Controls.Add(this.label69);
+            this.Controls.Add(this.label66);
+            this.Controls.Add(this.label70);
+            this.Controls.Add(this.label63);
             this.Controls.Add(this.searchLookUpEdit2);
+            this.Controls.Add(this.label64);
             this.Controls.Add(this.lblGioiTinh);
+            this.Controls.Add(this.label65);
             this.Controls.Add(this.txtNamSinh);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -4226,6 +4701,10 @@ namespace DataUseVaccine.FormDetail
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
@@ -4331,16 +4810,54 @@ namespace DataUseVaccine.FormDetail
         private Bunifu.UI.WinForms.BunifuDatePicker txtTimeTiem1;
         private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ma;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ten;
         private System.Windows.Forms.Label label41;
         private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ma;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ten;
         private Bunifu.UI.WinForms.BunifuTextBox vx_Ma1;
         private System.Windows.Forms.Label label44;
         private DevExpress.XtraGrid.Columns.GridColumn DTuong_nsinh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_lo;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ngayNhap;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit5;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

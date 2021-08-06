@@ -124,5 +124,35 @@ namespace DataUseVaccine.Services
             _data.Fill(DTuong);
             return DTuong;
         }
+
+
+        public static DataTable TrangChu()
+        {
+            SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
+            if (_conn.State == ConnectionState.Closed)
+            {
+                _conn.Open();
+            }
+            DataTable DTuong = new DataTable();
+            var text = $"select * from dbo.TrangChu";
+            SqlDataAdapter _data = new SqlDataAdapter(text, _conn);
+            _data.Fill(DTuong);
+            return DTuong;
+        }
+
+        public static DataTable bindingTrangChu(string ID)
+        {
+            SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
+            if (_conn.State == ConnectionState.Closed)
+            {
+                _conn.Open();
+            }
+
+            DataTable DTuong = new DataTable();
+            var text = $"select * from dbo.TrangChu where trangchu_id = '{ID}'";
+            SqlDataAdapter _data = new SqlDataAdapter(text, _conn);
+            _data.Fill(DTuong);
+            return DTuong;
+        }
     }
 }

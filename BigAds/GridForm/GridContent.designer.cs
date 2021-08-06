@@ -45,23 +45,29 @@ namespace DataUseVaccine.Frm
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.button = new DevExpress.XtraGrid.Columns.GridColumn();
             this.buttonActions = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.Send = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonEmail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.ContentID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ContentName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ChuyenMuc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Tags = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ContentText = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.trang_thai = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.userAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.isTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_nsinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_GTinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_CCCD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DTuong_BHYT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TimeTiem1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ma2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_ten2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_lo2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_lo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DMBsy_Ten2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TimeTiem2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -172,7 +178,7 @@ namespace DataUseVaccine.Frm
             this.btnPrint.OnIdleState.BorderThickness = 1;
             this.btnPrint.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.btnPrint.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnIdleState.IconLeftImage")));
+            this.btnPrint.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.OnIdleState.IconLeftImage")));
             this.btnPrint.OnIdleState.IconRightImage = null;
             this.btnPrint.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnPrint.OnPressedState.BorderRadius = 10;
@@ -262,7 +268,7 @@ namespace DataUseVaccine.Frm
             this.btnRefresh.OnIdleState.BorderThickness = 1;
             this.btnRefresh.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.btnRefresh.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.btnRefresh.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.OnIdleState.IconLeftImage")));
             this.btnRefresh.OnIdleState.IconRightImage = null;
             this.btnRefresh.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnRefresh.OnPressedState.BorderRadius = 10;
@@ -352,7 +358,7 @@ namespace DataUseVaccine.Frm
             this.btnEdit.OnIdleState.BorderThickness = 1;
             this.btnEdit.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnEdit.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnTest.OnIdleState.IconLeftImage")));
+            this.btnEdit.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.OnIdleState.IconLeftImage")));
             this.btnEdit.OnIdleState.IconRightImage = null;
             this.btnEdit.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnEdit.OnPressedState.BorderRadius = 10;
@@ -442,7 +448,7 @@ namespace DataUseVaccine.Frm
             this.btnAdd.OnIdleState.BorderThickness = 1;
             this.btnAdd.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btnAdd.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.OnIdleState.IconLeftImage")));
+            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.OnIdleState.IconLeftImage")));
             this.btnAdd.OnIdleState.IconRightImage = null;
             this.btnAdd.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnAdd.OnPressedState.BorderRadius = 10;
@@ -497,16 +503,22 @@ namespace DataUseVaccine.Frm
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.button,
-            this.Send,
-            this.ContentID,
-            this.ContentName,
-            this.ChuyenMuc,
-            this.Tags,
-            this.ContentText,
-            this.trang_thai,
-            this.userAdd,
-            this.isTime});
+            this.DTuong_ma,
+            this.DTuong_ten,
+            this.DTuong_nsinh,
+            this.DTuong_GTinh,
+            this.DTuong_CCCD,
+            this.DTuong_BHYT,
+            this.vx_ma,
+            this.vx_ten,
+            this.vx_lo,
+            this.DMBsy_Ten,
+            this.TimeTiem1,
+            this.vx_ma2,
+            this.vx_ten2,
+            this.vx_lo2,
+            this.DMBsy_Ten2,
+            this.TimeTiem2});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 900;
@@ -516,13 +528,7 @@ namespace DataUseVaccine.Frm
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            // 
-            // button
-            // 
-            this.button.Caption = "Actions";
-            this.button.ColumnEdit = this.buttonActions;
-            this.button.Name = "button";
-            this.button.Width = 58;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
             // buttonActions
             // 
@@ -532,12 +538,6 @@ namespace DataUseVaccine.Frm
             this.buttonActions.Name = "buttonActions";
             this.buttonActions.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // Send
-            // 
-            this.Send.Caption = "Gửi x.duyệt";
-            this.Send.ColumnEdit = this.ButtonEmail;
-            this.Send.Name = "Send";
-            // 
             // ButtonEmail
             // 
             this.ButtonEmail.AutoHeight = false;
@@ -546,101 +546,102 @@ namespace DataUseVaccine.Frm
             this.ButtonEmail.Name = "ButtonEmail";
             this.ButtonEmail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // ContentID
+            // DTuong_ma
             // 
-            this.ContentID.AppearanceHeader.Options.UseTextOptions = true;
-            this.ContentID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ContentID.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.ContentID.Caption = "Stt";
-            this.ContentID.FieldName = "ContentID";
-            this.ContentID.Name = "ContentID";
-            this.ContentID.OptionsColumn.ReadOnly = true;
-            this.ContentID.Visible = true;
-            this.ContentID.VisibleIndex = 1;
-            this.ContentID.Width = 70;
+            this.DTuong_ma.AppearanceHeader.Options.UseTextOptions = true;
+            this.DTuong_ma.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DTuong_ma.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DTuong_ma.Caption = "Mã đối tượng";
+            this.DTuong_ma.FieldName = "DTuong_ma";
+            this.DTuong_ma.Name = "DTuong_ma";
+            this.DTuong_ma.OptionsColumn.ReadOnly = true;
+            this.DTuong_ma.Visible = true;
+            this.DTuong_ma.VisibleIndex = 1;
+            this.DTuong_ma.Width = 100;
             // 
-            // ContentName
+            // DTuong_ten
             // 
-            this.ContentName.AppearanceHeader.Options.UseTextOptions = true;
-            this.ContentName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ContentName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.ContentName.Caption = "Mã dự án";
-            this.ContentName.FieldName = "ContentName";
-            this.ContentName.Name = "ContentName";
-            this.ContentName.OptionsColumn.ReadOnly = true;
-            this.ContentName.Visible = true;
-            this.ContentName.VisibleIndex = 2;
-            this.ContentName.Width = 107;
+            this.DTuong_ten.AppearanceHeader.Options.UseTextOptions = true;
+            this.DTuong_ten.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DTuong_ten.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DTuong_ten.Caption = "Tên đối tượng";
+            this.DTuong_ten.FieldName = "DTuong_ten";
+            this.DTuong_ten.Name = "DTuong_ten";
+            this.DTuong_ten.OptionsColumn.ReadOnly = true;
+            this.DTuong_ten.Visible = true;
+            this.DTuong_ten.VisibleIndex = 2;
+            this.DTuong_ten.Width = 250;
             // 
-            // ChuyenMuc
+            // DTuong_nsinh
             // 
-            this.ChuyenMuc.Caption = "Chuyên mục";
-            this.ChuyenMuc.FieldName = "ChuyenMuc";
-            this.ChuyenMuc.Name = "ChuyenMuc";
-            this.ChuyenMuc.OptionsColumn.ReadOnly = true;
-            this.ChuyenMuc.Visible = true;
-            this.ChuyenMuc.VisibleIndex = 3;
-            this.ChuyenMuc.Width = 94;
+            this.DTuong_nsinh.Caption = "Năm sinh";
+            this.DTuong_nsinh.DisplayFormat.FormatString = "dd - MM - yyyy";
+            this.DTuong_nsinh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.DTuong_nsinh.FieldName = "DTuong_nsinh";
+            this.DTuong_nsinh.Name = "DTuong_nsinh";
+            this.DTuong_nsinh.OptionsColumn.ReadOnly = true;
+            this.DTuong_nsinh.Visible = true;
+            this.DTuong_nsinh.VisibleIndex = 3;
+            this.DTuong_nsinh.Width = 100;
             // 
-            // Tags
+            // DTuong_GTinh
             // 
-            this.Tags.Caption = "Tags";
-            this.Tags.FieldName = "Tags";
-            this.Tags.Name = "Tags";
-            this.Tags.OptionsColumn.ReadOnly = true;
-            this.Tags.Visible = true;
-            this.Tags.VisibleIndex = 4;
-            this.Tags.Width = 100;
+            this.DTuong_GTinh.Caption = "Giới tính";
+            this.DTuong_GTinh.FieldName = "DTuong_GTinh";
+            this.DTuong_GTinh.Name = "DTuong_GTinh";
+            this.DTuong_GTinh.OptionsColumn.ReadOnly = true;
+            this.DTuong_GTinh.Visible = true;
+            this.DTuong_GTinh.VisibleIndex = 4;
+            this.DTuong_GTinh.Width = 70;
             // 
-            // ContentText
+            // DTuong_CCCD
             // 
-            this.ContentText.AppearanceHeader.Options.UseTextOptions = true;
-            this.ContentText.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ContentText.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.ContentText.Caption = "Mô tả";
-            this.ContentText.FieldName = "ContentText";
-            this.ContentText.Name = "ContentText";
-            this.ContentText.OptionsColumn.ReadOnly = true;
-            this.ContentText.Visible = true;
-            this.ContentText.VisibleIndex = 5;
-            this.ContentText.Width = 367;
+            this.DTuong_CCCD.AppearanceHeader.Options.UseTextOptions = true;
+            this.DTuong_CCCD.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DTuong_CCCD.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DTuong_CCCD.Caption = "CCCD / CMND";
+            this.DTuong_CCCD.FieldName = "DTuong_CCCD";
+            this.DTuong_CCCD.Name = "DTuong_CCCD";
+            this.DTuong_CCCD.OptionsColumn.ReadOnly = true;
+            this.DTuong_CCCD.Visible = true;
+            this.DTuong_CCCD.VisibleIndex = 5;
+            this.DTuong_CCCD.Width = 150;
             // 
-            // trang_thai
+            // DTuong_BHYT
             // 
-            this.trang_thai.Caption = "Trạng thái";
-            this.trang_thai.FieldName = "trang_thai";
-            this.trang_thai.Name = "trang_thai";
-            this.trang_thai.OptionsColumn.ReadOnly = true;
-            this.trang_thai.Visible = true;
-            this.trang_thai.VisibleIndex = 7;
+            this.DTuong_BHYT.Caption = "Thẻ BHYT";
+            this.DTuong_BHYT.FieldName = "DTuong_BHYT";
+            this.DTuong_BHYT.Name = "DTuong_BHYT";
+            this.DTuong_BHYT.OptionsColumn.ReadOnly = true;
+            this.DTuong_BHYT.Visible = true;
+            this.DTuong_BHYT.VisibleIndex = 6;
+            this.DTuong_BHYT.Width = 150;
             // 
-            // userAdd
+            // vx_ma
             // 
-            this.userAdd.AppearanceHeader.Options.UseTextOptions = true;
-            this.userAdd.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.userAdd.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.userAdd.Caption = "User thêm mới";
-            this.userAdd.FieldName = "userAdd";
-            this.userAdd.Name = "userAdd";
-            this.userAdd.OptionsColumn.ReadOnly = true;
-            this.userAdd.Visible = true;
-            this.userAdd.VisibleIndex = 6;
-            this.userAdd.Width = 104;
+            this.vx_ma.AppearanceHeader.Options.UseTextOptions = true;
+            this.vx_ma.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.vx_ma.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.vx_ma.Caption = "Mã Vx lần 1";
+            this.vx_ma.FieldName = "vx_ma";
+            this.vx_ma.Name = "vx_ma";
+            this.vx_ma.OptionsColumn.ReadOnly = true;
+            this.vx_ma.Visible = true;
+            this.vx_ma.VisibleIndex = 7;
+            this.vx_ma.Width = 100;
             // 
-            // isTime
+            // vx_ten
             // 
-            this.isTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.isTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.isTime.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.isTime.Caption = "Time UpLoad";
-            this.isTime.DisplayFormat.FormatString = "dd-MM-yy    hh : mm : ss";
-            this.isTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.isTime.FieldName = "isTime";
-            this.isTime.Name = "isTime";
-            this.isTime.OptionsColumn.ReadOnly = true;
-            this.isTime.Visible = true;
-            this.isTime.VisibleIndex = 8;
-            this.isTime.Width = 87;
+            this.vx_ten.AppearanceHeader.Options.UseTextOptions = true;
+            this.vx_ten.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.vx_ten.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.vx_ten.Caption = "Tên Vx lần 1";
+            this.vx_ten.FieldName = "vx_ten";
+            this.vx_ten.Name = "vx_ten";
+            this.vx_ten.OptionsColumn.ReadOnly = true;
+            this.vx_ten.Visible = true;
+            this.vx_ten.VisibleIndex = 8;
+            this.vx_ten.Width = 150;
             // 
             // repositoryItemCheckEdit9
             // 
@@ -676,6 +677,86 @@ namespace DataUseVaccine.Frm
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 0;
             this.gridColumn10.Width = 44;
+            // 
+            // DMBsy_Ten
+            // 
+            this.DMBsy_Ten.Caption = "Bác sỹ tiêm";
+            this.DMBsy_Ten.FieldName = "DMBsy_Ten";
+            this.DMBsy_Ten.Name = "DMBsy_Ten";
+            this.DMBsy_Ten.OptionsColumn.ReadOnly = true;
+            this.DMBsy_Ten.Visible = true;
+            this.DMBsy_Ten.VisibleIndex = 10;
+            this.DMBsy_Ten.Width = 150;
+            // 
+            // TimeTiem1
+            // 
+            this.TimeTiem1.Caption = "Thời gian tiêm lần 1";
+            this.TimeTiem1.DisplayFormat.FormatString = "dd - MM - yyyy  HH:mm:ss  tt";
+            this.TimeTiem1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.TimeTiem1.FieldName = "TimeTiem1";
+            this.TimeTiem1.Name = "TimeTiem1";
+            this.TimeTiem1.OptionsColumn.ReadOnly = true;
+            this.TimeTiem1.Visible = true;
+            this.TimeTiem1.VisibleIndex = 11;
+            this.TimeTiem1.Width = 150;
+            // 
+            // vx_ma2
+            // 
+            this.vx_ma2.Caption = "Mã Vx lần 2";
+            this.vx_ma2.FieldName = "vx_ma2";
+            this.vx_ma2.Name = "vx_ma2";
+            this.vx_ma2.OptionsColumn.ReadOnly = true;
+            this.vx_ma2.Visible = true;
+            this.vx_ma2.VisibleIndex = 12;
+            this.vx_ma2.Width = 100;
+            // 
+            // vx_ten2
+            // 
+            this.vx_ten2.Caption = "Tên Vx lần 2";
+            this.vx_ten2.FieldName = "vx_ten2";
+            this.vx_ten2.Name = "vx_ten2";
+            this.vx_ten2.OptionsColumn.ReadOnly = true;
+            this.vx_ten2.Visible = true;
+            this.vx_ten2.VisibleIndex = 13;
+            this.vx_ten2.Width = 150;
+            // 
+            // vx_lo2
+            // 
+            this.vx_lo2.Caption = "Lô Vx lần 2";
+            this.vx_lo2.FieldName = "vx_lo2";
+            this.vx_lo2.Name = "vx_lo2";
+            this.vx_lo2.OptionsColumn.ReadOnly = true;
+            this.vx_lo2.Visible = true;
+            this.vx_lo2.VisibleIndex = 16;
+            this.vx_lo2.Width = 150;
+            // 
+            // vx_lo
+            // 
+            this.vx_lo.Caption = "Lô vx lần 1";
+            this.vx_lo.FieldName = "vx_lo";
+            this.vx_lo.Name = "vx_lo";
+            this.vx_lo.Visible = true;
+            this.vx_lo.VisibleIndex = 9;
+            this.vx_lo.Width = 100;
+            // 
+            // DMBsy_Ten2
+            // 
+            this.DMBsy_Ten2.Caption = "Bác sỹ lần 2";
+            this.DMBsy_Ten2.FieldName = "DMBsy_Ten2";
+            this.DMBsy_Ten2.Name = "DMBsy_Ten2";
+            this.DMBsy_Ten2.OptionsColumn.ReadOnly = true;
+            this.DMBsy_Ten2.Visible = true;
+            this.DMBsy_Ten2.VisibleIndex = 14;
+            this.DMBsy_Ten2.Width = 150;
+            // 
+            // TimeTiem2
+            // 
+            this.TimeTiem2.Caption = "Thời gian tiêm lần 2";
+            this.TimeTiem2.FieldName = "TimeTiem2";
+            this.TimeTiem2.Name = "TimeTiem2";
+            this.TimeTiem2.Visible = true;
+            this.TimeTiem2.VisibleIndex = 15;
+            this.TimeTiem2.Width = 150;
             // 
             // GridContent
             // 
@@ -718,22 +799,28 @@ namespace DataUseVaccine.Frm
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit9;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn ContentID;
-        private DevExpress.XtraGrid.Columns.GridColumn ContentText;
-        private DevExpress.XtraGrid.Columns.GridColumn userAdd;
-        private DevExpress.XtraGrid.Columns.GridColumn isTime;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_ma;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_CCCD;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ma;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ten;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
-        private DevExpress.XtraGrid.Columns.GridColumn ContentName;
-        private DevExpress.XtraGrid.Columns.GridColumn button;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_ten;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit buttonActions;
-        private DevExpress.XtraGrid.Columns.GridColumn Tags;
-        private DevExpress.XtraGrid.Columns.GridColumn ChuyenMuc;
-        private DevExpress.XtraGrid.Columns.GridColumn Send;
-        private DevExpress.XtraGrid.Columns.GridColumn trang_thai;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_GTinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_nsinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DTuong_BHYT;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonEmail;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPrint;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnRefresh;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ten;
+        private DevExpress.XtraGrid.Columns.GridColumn TimeTiem1;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ma2;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_ten2;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_lo2;
+        private DevExpress.XtraGrid.Columns.GridColumn vx_lo;
+        private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ten2;
+        private DevExpress.XtraGrid.Columns.GridColumn TimeTiem2;
     }
 }

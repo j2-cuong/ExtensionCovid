@@ -19,6 +19,7 @@ namespace DataUseVaccine.Frm
         public GridContent()
         {
             InitializeComponent();
+            LoadScreen();
         }
 
         public static GridContent Instance
@@ -38,6 +39,7 @@ namespace DataUseVaccine.Frm
             Configs.UpdateSettingAppConfig("Editmode", "1");
             FormData _f = new FormData(ID.ToString(), time_);
             _f.ShowDialog();
+            LoadScreen();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -54,16 +56,22 @@ namespace DataUseVaccine.Frm
             Configs.UpdateSettingAppConfig("Editmode", "2");
             FormData _frmCm = new FormData(idSend , time_);
             _frmCm.ShowDialog();
+            LoadScreen();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            XtraMessageBox.Show("test");
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            LoadScreen();
         }
+        private void LoadScreen()
+        {
+            gridControl1.DataSource = LoadData.TrangChu();
+        }
+
     }
 }

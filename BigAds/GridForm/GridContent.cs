@@ -49,10 +49,10 @@ namespace DataUseVaccine.Frm
             foreach (var item in gridView1.GetSelectedRows())
             {
                 DataRowView a = (DataRowView)gridView1.GetRow(item);
-                idSend = a.Row["ID"].ToString();
+                idSend = a.Row["TrangChu_id"].ToString();
 
             }
-
+            var resultDel = new CountTime().delContent(idSend);
             Configs.UpdateSettingAppConfig("Editmode", "2");
             FormData _frmCm = new FormData(idSend , time_);
             _frmCm.ShowDialog();

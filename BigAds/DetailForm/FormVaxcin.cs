@@ -110,7 +110,8 @@ namespace DataUseVaccine.FormDetail
                             $"N'{_time2}' ," +
                             $"N'{_time}' ," +
                             $"{vx_slNhap.Text.Trim()} , " +
-                            $"0 )";
+                            $"0 ," +
+                            $"{txtKcach})";
                         SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
                         InsertSQL.ExecuteNonQuery();
                         XtraMessageBox.Show("Tạo mới thành công");
@@ -149,6 +150,10 @@ namespace DataUseVaccine.FormDetail
                     {
                         XtraMessageBox.Show("Số lượng nhập không được để trống");
                     }
+                    else if (string.IsNullOrEmpty(txtKcach.Text.Trim()))
+                    {
+                        XtraMessageBox.Show("Số lượng nhập không được để trống");
+                    }
                     else
                     {
                         var _time = bunifuDatePicker1.Value.ToString();
@@ -160,7 +165,8 @@ namespace DataUseVaccine.FormDetail
                             $"vx_lo=N'{vx_lo.Text.Trim()}' , " +
                             $"vx_ngayNhap=N'{_time2}' ," +
                             $"vx_hsd=N'{_time}' ," +
-                            $"vx_slNhap={vx_slNhap.Text.Trim()} , ";
+                            $"vx_slNhap={vx_slNhap.Text.Trim()} , " +
+                            $"tgTiem = {txtKcach.Text.Trim()}";
                         SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
                         InsertSQL.ExecuteNonQuery();
                         XtraMessageBox.Show("Sửa thành công");
@@ -195,6 +201,7 @@ namespace DataUseVaccine.FormDetail
                             txtNgayNhap.Text = !string.IsNullOrEmpty(item["vx_ngayNhap"].ToString()) ? item["vx_ngayNhap"].ToString() : null;
                             bunifuDatePicker1.Text = !string.IsNullOrEmpty(item["vx_hsd"].ToString()) ? item["vx_hsd"].ToString() : null;
                             vx_slNhap.Text = !string.IsNullOrEmpty(item["vx_slNhap"].ToString()) ? item["vx_slNhap"].ToString() : null;
+                            txtKcach.Text = !string.IsNullOrEmpty(item["tgTiem"].ToString()) ? (item["tgTiem"].ToString()) : null;
                         }
                     } else
                     {
@@ -209,6 +216,16 @@ namespace DataUseVaccine.FormDetail
                 return;
             }
             
+        }
+
+        private void txtKcach_TextChanged(object sender, EventArgs e)
+        {
+            int a;
+            bool isValidInt = int.TryParse(txtKcach.Text, out a);
+            if (isValidInt == false)
+            {
+                XtraMessageBox.Show("Định đạng nhập vào không phải dạng số");
+            }
         }
     }
 }

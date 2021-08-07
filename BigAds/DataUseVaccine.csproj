@@ -429,6 +429,7 @@
     <None Include="Resources\actions_book.svg" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\CountTime.cs" />
     <Compile Include="Services\GrData.cs" />
     <Compile Include="Services\dvhc.cs" />
     <Compile Include="Services\infoData.cs" />

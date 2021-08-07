@@ -69,6 +69,9 @@ namespace DataUseVaccine.FormDetail
             if (Properties.Settings.Default.Editmode.Contains("1"))
             {
                 txtTimeTiem1.Value = _time;
+            } else
+            {
+                txtTimeTiem2.Value = _time;
             }
         }
 

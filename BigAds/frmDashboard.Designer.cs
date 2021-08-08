@@ -129,28 +129,28 @@ namespace DataUseVaccine
             // 
             this.ArVaccine.Name = "ArVaccine";
             this.ArVaccine.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ArVaccine.Text = "Vaccine";
+            this.ArVaccine.Text = "Vắc xin";
             this.ArVaccine.Click += new System.EventHandler(this.ArVaccine_Click);
             // 
             // Arbsy
             // 
             this.Arbsy.Name = "Arbsy";
             this.Arbsy.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.Arbsy.Text = "Doctor";
+            this.Arbsy.Text = "Bác sỹ";
             this.Arbsy.Click += new System.EventHandler(this.Arbsy_Click);
             // 
             // ArPatient
             // 
             this.ArPatient.Name = "ArPatient";
             this.ArPatient.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ArPatient.Text = "Patient";
+            this.ArPatient.Text = "Bệnh nhân";
             this.ArPatient.Click += new System.EventHandler(this.ArPatient_Click);
             // 
             // ArGroupPatient
             // 
             this.ArGroupPatient.Name = "ArGroupPatient";
             this.ArGroupPatient.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ArGroupPatient.Text = "Group Patient";
+            this.ArGroupPatient.Text = "Nhóm bệnh nhân";
             this.ArGroupPatient.Click += new System.EventHandler(this.ArGroupPatient_Click);
             // 
             // fluentDesignFormControl1

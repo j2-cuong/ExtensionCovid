@@ -78,7 +78,7 @@ namespace DataUseVaccine.FormDetail
                 {
 
                     var a = 
-                    txtMaDT.Text = NullToString(item["DTuong_ma"].ToString());
+                    txtMaDT.Text = NullToString(item["DTuong_ma"].ToString()).Trim();
                     txtTenDT.Text = NullToString(item["DTuong_ten"].ToString());
                     txtNamSinh.Text = item["DTuong_nsinh"].ToString();
                     lblGioiTinh.Text = NullToString(item["DTuong_GTinh"].ToString());

@@ -99,8 +99,8 @@ namespace DataUseVaccine.FormDetail
                     }
                     else
                     {
-                        var _time = bunifuDatePicker1.Value.ToString();
-                        var _time2 = txtNgayNhap.Value.ToString();
+                        var _time = bunifuDatePicker1.Value.ToString("dd - MM - yyyy");
+                        var _time2 = txtNgayNhap.Value.ToString("dd - MM - yyyy");
                         var Qr = $"INSERT INTO dbo.VacXin VALUES  ( NEWID() , " +
                             $"N'{vx_ma.Text.Trim()}' , " +
                             $"N'{vx_ten.Text.Trim()}' , " +
@@ -111,7 +111,7 @@ namespace DataUseVaccine.FormDetail
                             $"N'{_time}' ," +
                             $"{vx_slNhap.Text.Trim()} , " +
                             $"0 ," +
-                            $"{txtKcach})";
+                            $"{txtKcach.Text.Trim()})";
                         SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
                         InsertSQL.ExecuteNonQuery();
                         XtraMessageBox.Show("Tạo mới thành công");

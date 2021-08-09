@@ -29,10 +29,12 @@ namespace DataUseVaccine.Frm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GridDtuong));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GridDtuong));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -54,9 +56,11 @@ namespace DataUseVaccine.Frm
             this.DTuong_DCCtiet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.isTimeAdd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnImport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -69,19 +73,22 @@ namespace DataUseVaccine.Frm
             // 
             this.groupControl2.Controls.Add(this.gridControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 56);
+            this.groupControl2.Location = new System.Drawing.Point(0, 69);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(988, 473);
+            this.groupControl2.Size = new System.Drawing.Size(1153, 582);
             this.groupControl2.TabIndex = 7;
             this.groupControl2.Text = "Thông tin đối tượng";
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 23);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Location = new System.Drawing.Point(2, 28);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(984, 448);
+            this.gridControl1.Size = new System.Drawing.Size(1149, 552);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -106,6 +113,7 @@ namespace DataUseVaccine.Frm
             this.DTuong_XaCode,
             this.DTuong_DCCtiet,
             this.isTimeAdd});
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
@@ -117,21 +125,23 @@ namespace DataUseVaccine.Frm
             // 
             this.DTuong_ma.Caption = "Mã ĐT";
             this.DTuong_ma.FieldName = "DTuong_ma";
+            this.DTuong_ma.MinWidth = 23;
             this.DTuong_ma.Name = "DTuong_ma";
             this.DTuong_ma.OptionsColumn.ReadOnly = true;
             this.DTuong_ma.Visible = true;
             this.DTuong_ma.VisibleIndex = 1;
-            this.DTuong_ma.Width = 200;
+            this.DTuong_ma.Width = 233;
             // 
             // DTuong_ten
             // 
             this.DTuong_ten.Caption = "Tên ĐT";
             this.DTuong_ten.FieldName = "DTuong_ten";
+            this.DTuong_ten.MinWidth = 23;
             this.DTuong_ten.Name = "DTuong_ten";
             this.DTuong_ten.OptionsColumn.ReadOnly = true;
             this.DTuong_ten.Visible = true;
             this.DTuong_ten.VisibleIndex = 2;
-            this.DTuong_ten.Width = 350;
+            this.DTuong_ten.Width = 408;
             // 
             // DTuong_nsinh
             // 
@@ -139,150 +149,166 @@ namespace DataUseVaccine.Frm
             this.DTuong_nsinh.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.DTuong_nsinh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DTuong_nsinh.FieldName = "DTuong_nsinh";
+            this.DTuong_nsinh.MinWidth = 23;
             this.DTuong_nsinh.Name = "DTuong_nsinh";
             this.DTuong_nsinh.OptionsColumn.ReadOnly = true;
             this.DTuong_nsinh.Visible = true;
             this.DTuong_nsinh.VisibleIndex = 3;
-            this.DTuong_nsinh.Width = 100;
+            this.DTuong_nsinh.Width = 117;
             // 
             // DTuong_GTinh
             // 
             this.DTuong_GTinh.Caption = "Giới tính";
             this.DTuong_GTinh.FieldName = "DTuong_GTinh";
+            this.DTuong_GTinh.MinWidth = 23;
             this.DTuong_GTinh.Name = "DTuong_GTinh";
             this.DTuong_GTinh.OptionsColumn.ReadOnly = true;
             this.DTuong_GTinh.Visible = true;
             this.DTuong_GTinh.VisibleIndex = 4;
-            this.DTuong_GTinh.Width = 100;
+            this.DTuong_GTinh.Width = 117;
             // 
             // DTuong_DVCtac
             // 
             this.DTuong_DVCtac.Caption = "Đơn vị C/tác";
             this.DTuong_DVCtac.FieldName = "DTuong_DVCtac";
+            this.DTuong_DVCtac.MinWidth = 23;
             this.DTuong_DVCtac.Name = "DTuong_DVCtac";
             this.DTuong_DVCtac.OptionsColumn.ReadOnly = true;
             this.DTuong_DVCtac.Visible = true;
             this.DTuong_DVCtac.VisibleIndex = 5;
-            this.DTuong_DVCtac.Width = 350;
+            this.DTuong_DVCtac.Width = 408;
             // 
             // DTuong_SDT
             // 
             this.DTuong_SDT.Caption = "Số ĐT";
             this.DTuong_SDT.FieldName = "DTuong_SDT";
+            this.DTuong_SDT.MinWidth = 23;
             this.DTuong_SDT.Name = "DTuong_SDT";
             this.DTuong_SDT.OptionsColumn.ReadOnly = true;
             this.DTuong_SDT.Visible = true;
             this.DTuong_SDT.VisibleIndex = 6;
-            this.DTuong_SDT.Width = 100;
+            this.DTuong_SDT.Width = 117;
             // 
             // DTuong_CCCD
             // 
             this.DTuong_CCCD.Caption = "CMND / CCCD";
             this.DTuong_CCCD.FieldName = "DTuong_CCCD";
+            this.DTuong_CCCD.MinWidth = 23;
             this.DTuong_CCCD.Name = "DTuong_CCCD";
             this.DTuong_CCCD.OptionsColumn.ReadOnly = true;
             this.DTuong_CCCD.Visible = true;
             this.DTuong_CCCD.VisibleIndex = 7;
-            this.DTuong_CCCD.Width = 100;
+            this.DTuong_CCCD.Width = 117;
             // 
             // DTuong_BHYT
             // 
             this.DTuong_BHYT.Caption = "Thẻ BHYT";
             this.DTuong_BHYT.FieldName = "DTuong_BHYT";
+            this.DTuong_BHYT.MinWidth = 23;
             this.DTuong_BHYT.Name = "DTuong_BHYT";
             this.DTuong_BHYT.OptionsColumn.ReadOnly = true;
             this.DTuong_BHYT.Visible = true;
             this.DTuong_BHYT.VisibleIndex = 8;
-            this.DTuong_BHYT.Width = 100;
+            this.DTuong_BHYT.Width = 117;
             // 
             // NhomDT
             // 
             this.NhomDT.Caption = "Nhóm ĐT";
             this.NhomDT.FieldName = "NhomDT";
+            this.NhomDT.MinWidth = 23;
             this.NhomDT.Name = "NhomDT";
             this.NhomDT.OptionsColumn.ReadOnly = true;
             this.NhomDT.Visible = true;
             this.NhomDT.VisibleIndex = 9;
-            this.NhomDT.Width = 450;
+            this.NhomDT.Width = 525;
             // 
             // DTuong_Tinh
             // 
             this.DTuong_Tinh.Caption = "Tỉnh";
             this.DTuong_Tinh.FieldName = "DTuong_Tinh";
+            this.DTuong_Tinh.MinWidth = 23;
             this.DTuong_Tinh.Name = "DTuong_Tinh";
             this.DTuong_Tinh.OptionsColumn.ReadOnly = true;
             this.DTuong_Tinh.Visible = true;
             this.DTuong_Tinh.VisibleIndex = 10;
-            this.DTuong_Tinh.Width = 100;
+            this.DTuong_Tinh.Width = 117;
             // 
             // DTuong_TinhCode
             // 
             this.DTuong_TinhCode.Caption = "Mã tỉnh";
             this.DTuong_TinhCode.FieldName = "DTuong_TinhCode";
+            this.DTuong_TinhCode.MinWidth = 23;
             this.DTuong_TinhCode.Name = "DTuong_TinhCode";
             this.DTuong_TinhCode.OptionsColumn.ReadOnly = true;
             this.DTuong_TinhCode.Visible = true;
             this.DTuong_TinhCode.VisibleIndex = 11;
-            this.DTuong_TinhCode.Width = 100;
+            this.DTuong_TinhCode.Width = 117;
             // 
             // DTuong_Quan
             // 
             this.DTuong_Quan.Caption = "Quận";
             this.DTuong_Quan.FieldName = "DTuong_Quan";
+            this.DTuong_Quan.MinWidth = 23;
             this.DTuong_Quan.Name = "DTuong_Quan";
             this.DTuong_Quan.OptionsColumn.ReadOnly = true;
             this.DTuong_Quan.Visible = true;
             this.DTuong_Quan.VisibleIndex = 12;
-            this.DTuong_Quan.Width = 100;
+            this.DTuong_Quan.Width = 117;
             // 
             // DTuong_QuanCode
             // 
             this.DTuong_QuanCode.Caption = "Mã Quận";
             this.DTuong_QuanCode.FieldName = "DTuong_QuanCode";
+            this.DTuong_QuanCode.MinWidth = 23;
             this.DTuong_QuanCode.Name = "DTuong_QuanCode";
             this.DTuong_QuanCode.OptionsColumn.ReadOnly = true;
             this.DTuong_QuanCode.Visible = true;
             this.DTuong_QuanCode.VisibleIndex = 13;
-            this.DTuong_QuanCode.Width = 100;
+            this.DTuong_QuanCode.Width = 117;
             // 
             // DTuong_Xa
             // 
             this.DTuong_Xa.Caption = "Xã";
             this.DTuong_Xa.FieldName = "DTuong_Xa";
+            this.DTuong_Xa.MinWidth = 23;
             this.DTuong_Xa.Name = "DTuong_Xa";
             this.DTuong_Xa.OptionsColumn.ReadOnly = true;
             this.DTuong_Xa.Visible = true;
             this.DTuong_Xa.VisibleIndex = 14;
-            this.DTuong_Xa.Width = 100;
+            this.DTuong_Xa.Width = 117;
             // 
             // DTuong_XaCode
             // 
             this.DTuong_XaCode.Caption = "Mã Xã";
             this.DTuong_XaCode.FieldName = "DTuong_XaCode";
+            this.DTuong_XaCode.MinWidth = 23;
             this.DTuong_XaCode.Name = "DTuong_XaCode";
             this.DTuong_XaCode.OptionsColumn.ReadOnly = true;
             this.DTuong_XaCode.Visible = true;
             this.DTuong_XaCode.VisibleIndex = 15;
-            this.DTuong_XaCode.Width = 100;
+            this.DTuong_XaCode.Width = 117;
             // 
             // DTuong_DCCtiet
             // 
             this.DTuong_DCCtiet.Caption = "Đ/C chi tiết";
             this.DTuong_DCCtiet.FieldName = "DTuong_DCCtiet";
+            this.DTuong_DCCtiet.MinWidth = 23;
             this.DTuong_DCCtiet.Name = "DTuong_DCCtiet";
             this.DTuong_DCCtiet.OptionsColumn.ReadOnly = true;
             this.DTuong_DCCtiet.Visible = true;
             this.DTuong_DCCtiet.VisibleIndex = 16;
-            this.DTuong_DCCtiet.Width = 350;
+            this.DTuong_DCCtiet.Width = 408;
             // 
             // isTimeAdd
             // 
             this.isTimeAdd.Caption = "Time Upload";
             this.isTimeAdd.FieldName = "isTimeAdd";
+            this.isTimeAdd.MinWidth = 23;
             this.isTimeAdd.Name = "isTimeAdd";
             this.isTimeAdd.OptionsColumn.ReadOnly = true;
             this.isTimeAdd.Visible = true;
             this.isTimeAdd.VisibleIndex = 17;
+            this.isTimeAdd.Width = 87;
             // 
             // groupControl1
             // 
@@ -292,16 +318,110 @@ namespace DataUseVaccine.Frm
             this.groupControl1.AppearanceCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.groupControl1.AppearanceCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.groupControl1.AppearanceCaption.Options.UseBackColor = true;
+            this.groupControl1.Controls.Add(this.bunifuButton1);
+            this.groupControl1.Controls.Add(this.btnImport);
             this.groupControl1.Controls.Add(this.btnDelete);
             this.groupControl1.Controls.Add(this.btnEdit);
             this.groupControl1.Controls.Add(this.btnAdd);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(988, 56);
+            this.groupControl1.Size = new System.Drawing.Size(1153, 69);
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "Chức năng";
+            // 
+            // btnImport
+            // 
+            this.btnImport.AllowAnimations = true;
+            this.btnImport.AllowMouseEffects = true;
+            this.btnImport.AllowToggling = false;
+            this.btnImport.AnimationSpeed = 200;
+            this.btnImport.AutoGenerateColors = false;
+            this.btnImport.AutoRoundBorders = false;
+            this.btnImport.AutoSizeLeftIcon = true;
+            this.btnImport.AutoSizeRightIcon = true;
+            this.btnImport.BackColor = System.Drawing.Color.Transparent;
+            this.btnImport.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnImport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImport.BackgroundImage")));
+            this.btnImport.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnImport.ButtonText = "     Import Excel";
+            this.btnImport.ButtonTextMarginLeft = 0;
+            this.btnImport.ColorContrastOnClick = 45;
+            this.btnImport.ColorContrastOnHover = 45;
+            this.btnImport.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnImport.CustomizableEdges = borderEdges2;
+            this.btnImport.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnImport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnImport.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnImport.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnImport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnImport.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnImport.IconMarginLeft = 11;
+            this.btnImport.IconPadding = 10;
+            this.btnImport.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImport.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnImport.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnImport.IconSize = 25;
+            this.btnImport.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnImport.IdleBorderRadius = 10;
+            this.btnImport.IdleBorderThickness = 1;
+            this.btnImport.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnImport.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnImport.IdleIconLeftImage")));
+            this.btnImport.IdleIconRightImage = null;
+            this.btnImport.IndicateFocus = false;
+            this.btnImport.Location = new System.Drawing.Point(460, 10);
+            this.btnImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnImport.OnDisabledState.BorderRadius = 10;
+            this.btnImport.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnImport.OnDisabledState.BorderThickness = 1;
+            this.btnImport.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnImport.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnImport.OnDisabledState.IconLeftImage = null;
+            this.btnImport.OnDisabledState.IconRightImage = null;
+            this.btnImport.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(136)))), ((int)(((byte)(56)))));
+            this.btnImport.onHoverState.BorderRadius = 10;
+            this.btnImport.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnImport.onHoverState.BorderThickness = 1;
+            this.btnImport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(136)))), ((int)(((byte)(56)))));
+            this.btnImport.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnImport.onHoverState.IconLeftImage = null;
+            this.btnImport.onHoverState.IconRightImage = null;
+            this.btnImport.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnImport.OnIdleState.BorderRadius = 10;
+            this.btnImport.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnImport.OnIdleState.BorderThickness = 1;
+            this.btnImport.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnImport.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnImport.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnImport.OnIdleState.IconLeftImage")));
+            this.btnImport.OnIdleState.IconRightImage = null;
+            this.btnImport.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnImport.OnPressedState.BorderRadius = 10;
+            this.btnImport.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnImport.OnPressedState.BorderThickness = 1;
+            this.btnImport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnImport.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnImport.OnPressedState.IconLeftImage = null;
+            this.btnImport.OnPressedState.IconRightImage = null;
+            this.btnImport.Size = new System.Drawing.Size(215, 48);
+            this.btnImport.TabIndex = 39;
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnImport.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnImport.TextMarginLeft = 0;
+            this.btnImport.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnImport.UseDefaultRadiusAndThickness = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnDelete
             // 
@@ -322,11 +442,11 @@ namespace DataUseVaccine.Frm
             this.btnDelete.ColorContrastOnClick = 45;
             this.btnDelete.ColorContrastOnHover = 45;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnDelete.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnDelete.CustomizableEdges = borderEdges3;
             this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDelete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -350,7 +470,8 @@ namespace DataUseVaccine.Frm
             this.btnDelete.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.IdleIconLeftImage")));
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(267, 11);
+            this.btnDelete.Location = new System.Drawing.Point(314, 10);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.OnDisabledState.BorderRadius = 10;
@@ -384,7 +505,7 @@ namespace DataUseVaccine.Frm
             this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnDelete.OnPressedState.IconLeftImage = null;
             this.btnDelete.OnPressedState.IconRightImage = null;
-            this.btnDelete.Size = new System.Drawing.Size(96, 39);
+            this.btnDelete.Size = new System.Drawing.Size(112, 48);
             this.btnDelete.TabIndex = 38;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -412,11 +533,11 @@ namespace DataUseVaccine.Frm
             this.btnEdit.ColorContrastOnClick = 45;
             this.btnEdit.ColorContrastOnHover = 45;
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnEdit.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnEdit.CustomizableEdges = borderEdges4;
             this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEdit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEdit.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -440,7 +561,8 @@ namespace DataUseVaccine.Frm
             this.btnEdit.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.IdleIconLeftImage")));
             this.btnEdit.IdleIconRightImage = null;
             this.btnEdit.IndicateFocus = false;
-            this.btnEdit.Location = new System.Drawing.Point(144, 11);
+            this.btnEdit.Location = new System.Drawing.Point(168, 10);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEdit.OnDisabledState.BorderRadius = 10;
@@ -474,7 +596,7 @@ namespace DataUseVaccine.Frm
             this.btnEdit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnEdit.OnPressedState.IconLeftImage = null;
             this.btnEdit.OnPressedState.IconRightImage = null;
-            this.btnEdit.Size = new System.Drawing.Size(96, 39);
+            this.btnEdit.Size = new System.Drawing.Size(112, 48);
             this.btnEdit.TabIndex = 36;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEdit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -502,11 +624,11 @@ namespace DataUseVaccine.Frm
             this.btnAdd.ColorContrastOnClick = 45;
             this.btnAdd.ColorContrastOnHover = 45;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnAdd.CustomizableEdges = borderEdges3;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnAdd.CustomizableEdges = borderEdges5;
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAdd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -530,7 +652,8 @@ namespace DataUseVaccine.Frm
             this.btnAdd.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.IdleIconLeftImage")));
             this.btnAdd.IdleIconRightImage = null;
             this.btnAdd.IndicateFocus = false;
-            this.btnAdd.Location = new System.Drawing.Point(32, 11);
+            this.btnAdd.Location = new System.Drawing.Point(22, 10);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.OnDisabledState.BorderRadius = 10;
@@ -564,7 +687,7 @@ namespace DataUseVaccine.Frm
             this.btnAdd.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAdd.OnPressedState.IconLeftImage = null;
             this.btnAdd.OnPressedState.IconRightImage = null;
-            this.btnAdd.Size = new System.Drawing.Size(93, 39);
+            this.btnAdd.Size = new System.Drawing.Size(108, 48);
             this.btnAdd.TabIndex = 35;
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -573,14 +696,106 @@ namespace DataUseVaccine.Frm
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.AllowAnimations = true;
+            this.bunifuButton1.AllowMouseEffects = true;
+            this.bunifuButton1.AllowToggling = false;
+            this.bunifuButton1.AnimationSpeed = 200;
+            this.bunifuButton1.AutoGenerateColors = false;
+            this.bunifuButton1.AutoRoundBorders = false;
+            this.bunifuButton1.AutoSizeLeftIcon = true;
+            this.bunifuButton1.AutoSizeRightIcon = true;
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.ButtonText = "     File Mẫu Excel";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.ColorContrastOnClick = 45;
+            this.bunifuButton1.ColorContrastOnHover = 45;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges1;
+            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bunifuButton1.IconMarginLeft = 11;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bunifuButton1.IconSize = 25;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.bunifuButton1.IdleBorderRadius = 10;
+            this.bunifuButton1.IdleBorderThickness = 1;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.bunifuButton1.IdleIconLeftImage = global::DataUseVaccine.Properties.Resources._18__4_;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.IndicateFocus = false;
+            this.bunifuButton1.Location = new System.Drawing.Point(712, 10);
+            this.bunifuButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuButton1.Name = "bunifuButton1";
+            this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton1.OnDisabledState.BorderRadius = 10;
+            this.bunifuButton1.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.OnDisabledState.BorderThickness = 1;
+            this.bunifuButton1.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton1.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton1.OnDisabledState.IconLeftImage = null;
+            this.bunifuButton1.OnDisabledState.IconRightImage = null;
+            this.bunifuButton1.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(136)))), ((int)(((byte)(56)))));
+            this.bunifuButton1.onHoverState.BorderRadius = 10;
+            this.bunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.onHoverState.BorderThickness = 1;
+            this.bunifuButton1.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(136)))), ((int)(((byte)(56)))));
+            this.bunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.onHoverState.IconLeftImage = null;
+            this.bunifuButton1.onHoverState.IconRightImage = null;
+            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.bunifuButton1.OnIdleState.BorderRadius = 10;
+            this.bunifuButton1.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.OnIdleState.BorderThickness = 1;
+            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.bunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.OnIdleState.IconLeftImage = global::DataUseVaccine.Properties.Resources._18__4_;
+            this.bunifuButton1.OnIdleState.IconRightImage = null;
+            this.bunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton1.OnPressedState.BorderRadius = 10;
+            this.bunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.OnPressedState.BorderThickness = 1;
+            this.bunifuButton1.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.OnPressedState.IconLeftImage = null;
+            this.bunifuButton1.OnPressedState.IconRightImage = null;
+            this.bunifuButton1.Size = new System.Drawing.Size(215, 48);
+            this.bunifuButton1.TabIndex = 40;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bunifuButton1.TextMarginLeft = 0;
+            this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
             // GridDtuong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "GridDtuong";
-            this.Size = new System.Drawing.Size(988, 529);
+            this.Size = new System.Drawing.Size(1153, 651);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -616,5 +831,7 @@ namespace DataUseVaccine.Frm
         private DevExpress.XtraGrid.Columns.GridColumn DTuong_XaCode;
         private DevExpress.XtraGrid.Columns.GridColumn DTuong_DCCtiet;
         private DevExpress.XtraGrid.Columns.GridColumn isTimeAdd;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnImport;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }

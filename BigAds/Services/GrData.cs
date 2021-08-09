@@ -43,7 +43,7 @@ namespace DataUseVaccine.Services
                                         vx_nsx = !string.IsNullOrEmpty(row["vx_nsx"].ToString()) ? row["vx_nsx"].ToString() : null,
                                         vx_location = !string.IsNullOrEmpty(row["vx_location"].ToString()) ? row["vx_location"].ToString() : null,
                                         vx_lo = !string.IsNullOrEmpty(row["vx_lo"].ToString()) ? row["vx_lo"].ToString() : null,
-                                        vx_ngayNhap = !string.IsNullOrEmpty(row["vx_ngayNhap"].ToString()) ? row["vx_ngayNhap"].ToString() : null,
+                                        vx_ngayNhap = !string.IsNullOrEmpty(row["vx_ngayNhap"].ToString()) ? DateTime.Parse(row["vx_ngayNhap"].ToString()).ToString("dd/MM/yyyy") : null,
                                         vx_hsd = !string.IsNullOrEmpty(row["vx_hsd"].ToString()) ? row["vx_hsd"].ToString() : null,
                                         vx_slNhap = !string.IsNullOrEmpty(row["vx_slNhap"].ToString()) ? row["vx_slNhap"].ToString() : null,
                                         vx__slXuat = !string.IsNullOrEmpty(row["vx__slXuat"].ToString()) ? row["vx__slXuat"].ToString() : null,
@@ -95,7 +95,7 @@ namespace DataUseVaccine.Services
                                          DMBsy_Exp = !string.IsNullOrEmpty(row["DMBsy_Exp"].ToString()) ? row["DMBsy_Exp"].ToString() : null,
                                          DMBsy_Phone = !string.IsNullOrEmpty(row["DMBsy_Phone"].ToString()) ? row["DMBsy_Phone"].ToString() : null,
                                          DMBsy_bangCap = !string.IsNullOrEmpty(row["DMBsy_bangCap"].ToString()) ? row["DMBsy_bangCap"].ToString() : null,
-                                         
+
                                      });
                     return content;
                 }
@@ -108,7 +108,7 @@ namespace DataUseVaccine.Services
         }
 
 
-        
+
     }
     public class ThongTinVx
     {
@@ -121,7 +121,7 @@ namespace DataUseVaccine.Services
         public string vx_hsd { get; set; }
         public string vx_slNhap { get; set; }
         public string vx__slXuat { get; set; }
-        
+
     }
     public class ThongTinBsy
     {
@@ -132,6 +132,6 @@ namespace DataUseVaccine.Services
         public string DMBsy_Exp { get; set; }
         public string DMBsy_Phone { get; set; }
         public string DMBsy_bangCap { get; set; }
-        
+
     }
 }

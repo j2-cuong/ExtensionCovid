@@ -34,7 +34,7 @@ namespace DataUseVaccine.Frm
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Guid ID = Guid.NewGuid();
-            var time_ = DateTime.Now;
+            var time_ = DateTime.Now.ToString("dd - MM - yyyy   HH:mm.ss tt");
             Configs.UpdateSettingAppConfig("Editmode", "1");
             FormData _f = new FormData(ID.ToString(), time_);
             _f.ShowDialog();
@@ -45,7 +45,7 @@ namespace DataUseVaccine.Frm
         {
             var idSend = "";
             var idcheck = "";
-            var time_ = DateTime.Now;
+            var time_ = DateTime.Now.ToString("dd - MM - yyyy   HH:mm.ss tt");
             foreach (var item in gridView1.GetSelectedRows())
             {
                 DataRowView a = (DataRowView)gridView1.GetRow(item);
@@ -68,18 +68,18 @@ namespace DataUseVaccine.Frm
             {
                 try
                 {
-                    var resultDel = new CountTime().delContent(idSend);
-                    if (!resultDel.IsResult == true)
-                    {
-                        MessageBox.Show(resultDel.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
+                    //var resultDel = new CountTime().delContent(idSend);
+                    //if (!resultDel.IsResult == true)
+                    //{
+                    //    MessageBox.Show(resultDel.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
+                    //else
+                    //{
                         Configs.UpdateSettingAppConfig("Editmode", "2");
                         FormData _frmCm = new FormData(idSend, time_);
                         _frmCm.ShowDialog();
                         LoadScreen();
-                    }
+                    //}
                 
                 } catch (Exception ex)
                 {
@@ -159,11 +159,22 @@ namespace DataUseVaccine.Frm
                     {
                         _conn.Open();
                     }
-                    var Qr = $"Delete TrangChu where TrangChu_id = '{idSend}'";
-                    SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
-                    InsertSQL.ExecuteNonQuery();
-                    XtraMessageBox.Show("Xóa thành công");
-                    LoadScreen();
+                    var Qr = $"select * from  TrangChu where TrangChu_id = '{idSend}' AND trang_thai like '%2%'";
+                    DataTable _check = new DataTable();
+                    SqlDataAdapter f = new SqlDataAdapter(Qr, _conn);
+                    f.Fill(_check);
+                    if(_check.Rows.Count > 0)
+                    {
+                        XtraMessageBox.Show("Không thể xóa dữ liệu đã tiêm lần 2");
+                    }
+                    else
+                    {
+                        var Qru = $"delete TrangChu where TrangChu_id = '{idSend}'";
+                        SqlCommand InsertSQL = new SqlCommand(Qru, _conn);
+                        InsertSQL.ExecuteNonQuery();
+                        XtraMessageBox.Show("Xóa thành công");
+                        LoadScreen();
+                    }  
                 }
                 catch (Exception ex)
                 {

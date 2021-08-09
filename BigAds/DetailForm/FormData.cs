@@ -33,8 +33,8 @@ namespace DataUseVaccine.FormDetail
         SqlConnection _conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
         private string idGrid;
         private string SaveTime;
-        private DateTime _time;
-        public FormData(string ID, DateTime time_)
+        private string _time;
+        public FormData(string ID, string time_)
         {
             idGrid = ID;
             _time = time_;

@@ -46,7 +46,7 @@ namespace DataUseVaccine.Services
                 _conn.Open();
             }
             DataTable DTuong = new DataTable();
-            var text = $"select * from dbo.DTuong";
+            var text = $"select * from dbo.DTuong order by isTimeAdd desc";
             SqlDataAdapter _data = new SqlDataAdapter(text, _conn);
             _data.Fill(DTuong);
             return DTuong;

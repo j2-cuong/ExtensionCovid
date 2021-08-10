@@ -6,6 +6,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -158,7 +159,7 @@ namespace DataUseVaccine.Frm
         }
         SqlLibrary sLib = new SqlLibrary();
         string conn = Properties.Settings.Default.ConnectionString;
-        private void InsertDTuong(string ten, string DoB, string Gtinh, string dvCtac, string sdt, string cccd, string bhyt, string maNhom, string Tinh, string maTinh, string Quan, string maQuan, string xa, string maXa, string dChi)
+        private void InsertDTuong(string ma_dt,string ten, string DoB, string Gtinh, string dvCtac, string sdt, string cccd, string bhyt, string maNhom, string Tinh, string maTinh, string Quan, string maQuan, string xa, string maXa, string dChi)
         {
             sLib.open(conn);
             DateTime add = DateTime.Now;
@@ -191,7 +192,7 @@ namespace DataUseVaccine.Frm
 			isTimeAdd
 			) VALUES (
             N'" + id + @"',
-            N'" + ma + @"',
+            N'" + ma_dt + @"',
             N'" + ten + @"',
             N'" + DoB + @"',
             N'" + gt + @"',
@@ -232,6 +233,7 @@ namespace DataUseVaccine.Frm
                         for (int i = 7; i < dt.Rows.Count; i++)
                         {
                             InsertDTuong(
+                                dt.Rows[i][16].ToString(),
                                 dt.Rows[i][1].ToString(),
                                 Convert.ToDateTime(dt.Rows[i][2].ToString()).ToString("yyyy-MM-dd"),
                                 dt.Rows[i][3].ToString(),

@@ -178,5 +178,17 @@ namespace DataUseVaccine.Properties {
                 this["dataGrid"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string _typePrint {
+            get {
+                return ((string)(this["_typePrint"]));
+            }
+            set {
+                this["_typePrint"] = value;
+            }
+        }
     }
 }

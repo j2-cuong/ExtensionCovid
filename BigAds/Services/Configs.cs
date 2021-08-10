@@ -34,7 +34,8 @@ namespace DataUseVaccine.Services
 
         public static string dataGrid = Properties.Settings.Default.dataGrid;
 
-
+        public static string _typePrint = Properties.Settings.Default._typePrint;
+        
         public static void UpdateSettingAppConfig(string key, string value)
         {
             switch (key)
@@ -65,7 +66,8 @@ namespace DataUseVaccine.Services
                     Properties.Settings.Default.saveCountContent = int.Parse(value); break;
                 case "dataGrid":
                     Properties.Settings.Default.dataGrid = value; break;
-
+                case "_typePrint":
+                    Properties.Settings.Default._typePrint = value; break;
             }
 
             Properties.Settings.Default.Save();

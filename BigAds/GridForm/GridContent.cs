@@ -1,4 +1,5 @@
-﻿using DataUseVaccine.FormDetail;
+﻿using DataUseVaccine.DetailForm;
+using DataUseVaccine.FormDetail;
 using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
@@ -91,8 +92,33 @@ namespace DataUseVaccine.Frm
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            XtraMessageBox.Show("test");
+            var idSend = "";
+            var idcheck = "";
+            foreach (var item in gridView1.GetSelectedRows())
+            {
+                DataRowView a = (DataRowView)gridView1.GetRow(item);
+                idSend = a.Row["TrangChu_id"].ToString();
+                idcheck += idSend;
+            }
+            if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TrangChu_id") == null/*gridView1.SelectedRowsCount == 0*/)
+            {
+                MessageBox.Show("Bạn chưa chọn mã cần chỉnh sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (gridView1.FocusedRowHandle < 0)
+            {
+                MessageBox.Show("Bạn chưa chọn mã cần chỉnh sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (idcheck.Length > 36)
+            {
+                MessageBox.Show("Bạn không thể chỉnh sửa nhiều mã cùng 1 lúc", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                typePrint _frmCm = new typePrint(idSend);
+                _frmCm.ShowDialog();
+            }
         }
+         
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {

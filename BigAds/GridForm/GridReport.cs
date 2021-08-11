@@ -1,9 +1,5 @@
-﻿using DataUseVaccine.FormDetail;
-using DevExpress.XtraEditors;
-using System;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace DataUseVaccine.Frm
 {

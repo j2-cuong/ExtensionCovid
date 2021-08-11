@@ -6,9 +6,11 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using IronBarCode;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace DataUseVaccine.Frm
 {
@@ -269,6 +271,83 @@ namespace DataUseVaccine.Frm
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             OpenWithDefaultProgram();
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+            var idSend = "";
+            var idcheck = "";
+            foreach (var item in gridView1.GetSelectedRows())
+            {
+                DataRowView a = (DataRowView)gridView1.GetRow(item);
+                idSend = a.Row["DTuong_id"].ToString();
+                idcheck += idSend;
+            }
+            if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DTuong_id") == null/*gridView1.SelectedRowsCount == 0*/)
+            {
+                MessageBox.Show("Bạn chưa chọn mã cần chỉnh sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (gridView1.FocusedRowHandle < 0)
+            {
+                MessageBox.Show("Bạn chưa chọn mã cần chỉnh sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (idcheck.Length > 36)
+            {
+                MessageBox.Show("Bạn không thể chỉnh sửa nhiều mã cùng 1 lúc", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    if (_conn.State == ConnectionState.Closed)
+                    {
+                        _conn.Open();
+                    }
+                    var Qre = $"select  DTuong_ma as ma_dt, DTuong_ten as ten_dt from dbo.DTuong WHERE DTuong_id = '{idSend}'";
+                    DataTable Code = new DataTable();
+                    SqlDataAdapter f = new SqlDataAdapter(Qre, _conn);
+                    f.Fill(Code);
+                    if(Code.Rows.Count > 0)
+                    {
+                        var barcode = "";
+                        var barcodeName = "";
+                        foreach (DataRow item in Code.Rows)
+                        {
+                            barcode = item["ma_dt"].ToString().Trim();
+                            barcodeName = item["ten_dt"].ToString().Trim();
+                        }
+                        int imageWidth = 290;  // barcode image width
+                        int imageHeight = 120; //barcode image height
+                        Color foreColor = Color.Black; // Color to print barcode
+                        Color backColor = Color.White; //background color
+                        var MyBarCode = BarcodeWriter.CreateBarcode(barcode, BarcodeWriterEncoding.Code128, imageWidth, imageHeight);
+                        MyBarCode.AddAnnotationTextAboveBarcode(barcodeName);
+                        MyBarCode.AddBarcodeValueTextBelowBarcode();
+                        var name = barcode + ".png";
+                        SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                        saveFileDialog1.InitialDirectory = @"C:\";
+                        saveFileDialog1.Title = "Save Files";
+                        saveFileDialog1.CheckFileExists = false;
+                        saveFileDialog1.CheckPathExists = false;
+                        saveFileDialog1.DefaultExt = "png";
+                        saveFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+                        saveFileDialog1.FilterIndex = 2;
+                        saveFileDialog1.RestoreDirectory = true;
+                        ImageFormat format = ImageFormat.Png;
+                        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                        {
+                            MyBarCode.SaveAsPng(name);
+                        }
+                        Process.Start(name);
+                    }
+                    LoadScreen();
+                }
+                catch (Exception e12)
+                {
+                    XtraMessageBox.Show(e12.Message);
+                    return;
+                }
+            }
         }
     }
 }

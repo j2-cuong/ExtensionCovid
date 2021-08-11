@@ -1,7 +1,6 @@
 ﻿using DataUseVaccine.FormDetail;
 using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
 using System.Data.SqlClient;

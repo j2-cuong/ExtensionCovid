@@ -1,7 +1,6 @@
 ﻿
 using DataUseVaccine.Services;
 using DevExpress.XtraEditors;
-
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -303,10 +302,7 @@ namespace DataUseVaccine.FormDetail
                             XtraMessageBox.Show("Vui lòng điền đầy đủ thông tin bắt buộc");
                         } else
                         {
-
-
                             var b = txtTimeTiem1.Text.ToString();
-
                             var Qr = $"INSERT INTO dbo.TrangChu VALUES  ( N'{idGrid}','{txtMaDT.Text.Trim()}' , N'{txtTenDT.Text.Trim()}' , " +
                                 $"'{txtNamSinh.Text.ToString()}' , N'{lblGioiTinh.Text.Trim()}' ,N'{txtDvctac.Text.Trim()}' , " +
                                 $"N'{txtdienthoai.Text.Trim()}' , N'{txtCCCD.Text.Trim()}' , N'{txttheBH.Text.Trim()}' , " +
@@ -361,16 +357,12 @@ namespace DataUseVaccine.FormDetail
                         return;
                     }
                 }
-
             } 
             catch (Exception e1)
             {
                 XtraMessageBox.Show(e1.Message);
                 return;
             }
-            
         }
-
-        
     }
 }

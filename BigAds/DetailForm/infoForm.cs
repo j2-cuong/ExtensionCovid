@@ -27,8 +27,8 @@ namespace DataUseVaccine.DetailForm
                 }
             }
             splashScreenManager2.CloseWaitForm();
-            var tu_ngay = bunifuDatePicker1.Value.ToString("yyyy-dd-MM");
-            var den_ngay = bunifuDatePicker2.Value.ToString("yyyy-dd-MM");
+            var tu_ngay = bunifuDatePicker1.Value.ToString("yyyy-MM-dd");
+            var den_ngay = bunifuDatePicker2.Value.ToString("yyyy-MM-dd");
             var check1 = bunifuDatePicker1.Value.Date;
             var check2 = bunifuDatePicker2.Value.Date;
             if(check2 < check1)
@@ -45,7 +45,7 @@ namespace DataUseVaccine.DetailForm
                         txtDanhMuc.Text = item["soluong"].ToString();
                     }
                 }
-                var Tiem1Qr = $"SELECT count(*) as tiem1 FROM dbo.TrangChu WHERE  CONVERT(DATE, timeNew) between '{tu_ngay}' and '{den_ngay}' AND ISNULL(TimeTiem1,'')<>''";
+                var Tiem1Qr = $"SELECT count(*) as tiem1 FROM dbo.TrangChu WHERE TimeTiem1 is not null AND  CONVERT(DATE, timeNew) between '{tu_ngay}' and '{den_ngay}'";
                 DataTable Tiem1 = PublicTable.ReportTable(Tiem1Qr);
                 if (Tiem1.Rows.Count > 0)
                 {
@@ -55,7 +55,7 @@ namespace DataUseVaccine.DetailForm
                     }
                 }
 
-                var Tiem2Qr = $"SELECT count(*) as lan2 FROM dbo.TrangChu WHERE  CONVERT(DATE, timeNew) between '{tu_ngay}' and '{den_ngay}' AND ISNULL(TimeTiem2,'')<>''";
+                var Tiem2Qr = $"SELECT count(*) as lan2 FROM dbo.TrangChu WHERE TimeTiem2 is not null AND CONVERT(DATE, timeNew) between '{tu_ngay}' and '{den_ngay}'";
                 DataTable Tiem2 = PublicTable.ReportTable(Tiem2Qr);
                 if (Tiem2.Rows.Count > 0)
                 {

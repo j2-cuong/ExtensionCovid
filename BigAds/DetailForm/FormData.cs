@@ -268,7 +268,7 @@ namespace DataUseVaccine.FormDetail
                 txtDvctac.Text = NullToString(selectDv.DTuong_DVCtac.Trim());
                 txtdienthoai.Text = NullToString(selectDv.DTuong_SDT.Trim());
                 txtCCCD.Text = NullToString(selectDv.DTuong_CCCD.Trim());
-                txttheBH.Text = NullToString(selectDv.DTuong_BHYT.Trim());
+                txttheBH.Text = NullToString(selectDv.DTuong_BHYT);
                 txtNhomUT.Text = NullToString(selectDv.DTuong_MaNhom.Trim());
                 txtTinh.Text = NullToString(selectDv.DTuong_Tinh.Trim());
                 txtCodeTinh.Text = NullToString(selectDv.DTuong_TinhCode.Trim());

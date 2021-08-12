@@ -13,6 +13,7 @@ using System.Drawing.Imaging;
 using ZXing;
 using ZXing.QrCode;
 using System.Drawing.Drawing2D;
+using System.Globalization;
 
 namespace DataUseVaccine.Frm
 {
@@ -311,8 +312,18 @@ namespace DataUseVaccine.Frm
                     f.Fill(Code);
                     if(Code.Rows.Count > 0)
                     {
+                        var Name = DateTime.Now;
+                        string text = DateTime.UtcNow.ToString("dd_MM_yyy",
+                                                   CultureInfo.InvariantCulture);
                         var barcode = "";
                         var barcodeName = "";
+                        string root = $@"D:\BarCodes\{text}";
+                        
+                        if (!Directory.Exists(root))
+                        {
+                            Directory.CreateDirectory(root);
+
+                        }
                         foreach (DataRow item in Code.Rows)
                         {
                             barcode = item["ma_dt"].ToString().Trim();
@@ -330,9 +341,9 @@ namespace DataUseVaccine.Frm
                         qr.Format = BarcodeFormat.CODE_128;
                         var result = new Bitmap(qr.Write(barcode.Trim()));
 
-                        var name = result + ".png";
+                        var name = result + ".png";                       
                         SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                        saveFileDialog1.InitialDirectory = @"C:\";
+                        saveFileDialog1.InitialDirectory = root;
                         saveFileDialog1.Title = "Save Files";
                         saveFileDialog1.CheckFileExists = false;
                         saveFileDialog1.CheckPathExists = false;
@@ -343,9 +354,9 @@ namespace DataUseVaccine.Frm
                         ImageFormat format = ImageFormat.Png;
                         if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                         {
-                            result.Save(name);
+                            result.Save($@"{root}\{barcode}.png");
                         }
-                        Process.Start(name);
+                        Process.Start($@"{root}\{barcode}.png");
                     }
                     LoadScreen();
                 }

@@ -8,9 +8,11 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
-using IronBarCode;
 using System.Drawing;
 using System.Drawing.Imaging;
+using ZXing;
+using ZXing.QrCode;
+using System.Drawing.Drawing2D;
 
 namespace DataUseVaccine.Frm
 {
@@ -316,14 +318,19 @@ namespace DataUseVaccine.Frm
                             barcode = item["ma_dt"].ToString().Trim();
                             barcodeName = item["ten_dt"].ToString().Trim();
                         }
-                        int imageWidth = 290;  // barcode image width
-                        int imageHeight = 120; //barcode image height
-                        Color foreColor = Color.Black; // Color to print barcode
-                        Color backColor = Color.White; //background color
-                        var MyBarCode = BarcodeWriter.CreateBarcode(barcode, BarcodeWriterEncoding.Code128, imageWidth, imageHeight);
-                        MyBarCode.AddAnnotationTextAboveBarcode(barcodeName);
-                        MyBarCode.AddBarcodeValueTextBelowBarcode();
-                        var name = barcode + ".png";
+                        QrCodeEncodingOptions  options = new QrCodeEncodingOptions
+                        {
+                            DisableECI = true,
+                            CharacterSet = "UTF-8",
+                            Width = 120,
+                            Height = 50,
+                        };
+                        var qr = new BarcodeWriter();
+                        qr.Options = options;
+                        qr.Format = BarcodeFormat.CODE_128;
+                        var result = new Bitmap(qr.Write(barcode.Trim()));
+
+                        var name = result + ".png";
                         SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                         saveFileDialog1.InitialDirectory = @"C:\";
                         saveFileDialog1.Title = "Save Files";
@@ -336,7 +343,7 @@ namespace DataUseVaccine.Frm
                         ImageFormat format = ImageFormat.Png;
                         if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                         {
-                            MyBarCode.SaveAsPng(name);
+                            result.Save(name);
                         }
                         Process.Start(name);
                     }

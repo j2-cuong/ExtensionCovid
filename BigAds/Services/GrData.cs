@@ -43,8 +43,8 @@ namespace DataUseVaccine.Services
                                         vx_nsx = !string.IsNullOrEmpty(row["vx_nsx"].ToString()) ? row["vx_nsx"].ToString() : null,
                                         vx_location = !string.IsNullOrEmpty(row["vx_location"].ToString()) ? row["vx_location"].ToString() : null,
                                         vx_lo = !string.IsNullOrEmpty(row["vx_lo"].ToString()) ? row["vx_lo"].ToString() : null,
-                                        vx_ngayNhap = DateTime.Parse(row["vx_ngayNhap"].ToString()),
-                                        vx_hsd = DateTime.Parse(row["vx_hsd"].ToString()),
+                                        vx_ngayNhap = !string.IsNullOrEmpty(row["vx_ngayNhap"].ToString()) ? row["vx_ngayNhap"].ToString() : null,
+                                        vx_hsd = !string.IsNullOrEmpty(row["vx_hsd"].ToString()) ? row["vx_hsd"].ToString() : null,
                                         vx_slNhap = !string.IsNullOrEmpty(row["vx_slNhap"].ToString()) ? row["vx_slNhap"].ToString() : null,
                                         vx__slXuat = !string.IsNullOrEmpty(row["vx__slXuat"].ToString()) ? row["vx__slXuat"].ToString() : null,
                                     });
@@ -117,8 +117,8 @@ namespace DataUseVaccine.Services
         public string vx_nsx { get; set; }
         public string vx_location { get; set; }
         public string vx_lo { get; set; }
-        public DateTime vx_ngayNhap { get; set; }
-        public DateTime vx_hsd { get; set; }
+        public string vx_ngayNhap { get; set; }
+        public string vx_hsd { get; set; }
         public string vx_slNhap { get; set; }
         public string vx__slXuat { get; set; }
         

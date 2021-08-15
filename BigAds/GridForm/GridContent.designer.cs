@@ -45,8 +45,6 @@ namespace DataUseVaccine.Frm
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.buttonActions = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.ButtonEmail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.DTuong_ma = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DTuong_ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DTuong_nsinh = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,19 +53,22 @@ namespace DataUseVaccine.Frm
             this.DTuong_BHYT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_ma = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_ten = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vx_lo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DMBsy_Ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TimeTiem1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_ma2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_ten2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vx_lo2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.vx_lo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DMBsy_Ten2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TimeTiem2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.buttonActions = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.ButtonEmail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.trang_thai = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -518,7 +519,8 @@ namespace DataUseVaccine.Frm
             this.vx_ten2,
             this.vx_lo2,
             this.DMBsy_Ten2,
-            this.TimeTiem2});
+            this.TimeTiem2,
+            this.trang_thai});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 900;
@@ -529,22 +531,7 @@ namespace DataUseVaccine.Frm
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
-            // 
-            // buttonActions
-            // 
-            this.buttonActions.AutoHeight = false;
-            this.buttonActions.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonActions.Name = "buttonActions";
-            this.buttonActions.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // ButtonEmail
-            // 
-            this.ButtonEmail.AutoHeight = false;
-            this.ButtonEmail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.SpinRight)});
-            this.ButtonEmail.Name = "ButtonEmail";
-            this.ButtonEmail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             // 
             // DTuong_ma
             // 
@@ -643,40 +630,14 @@ namespace DataUseVaccine.Frm
             this.vx_ten.VisibleIndex = 8;
             this.vx_ten.Width = 150;
             // 
-            // repositoryItemCheckEdit9
+            // vx_lo
             // 
-            this.repositoryItemCheckEdit9.AutoHeight = false;
-            this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 12;
-            // 
-            // gridView3
-            // 
-            this.gridView3.Name = "gridView3";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Group";
-            this.gridColumn3.ColumnEdit = this.repositoryItemCheckEdit5;
-            this.gridColumn3.FieldName = "inv_group";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 0;
-            this.gridColumn3.Width = 44;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Group";
-            this.gridColumn10.ColumnEdit = this.repositoryItemCheckEdit5;
-            this.gridColumn10.FieldName = "inv_group";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 0;
-            this.gridColumn10.Width = 44;
+            this.vx_lo.Caption = "Lô vx lần 1";
+            this.vx_lo.FieldName = "vx_lo";
+            this.vx_lo.Name = "vx_lo";
+            this.vx_lo.Visible = true;
+            this.vx_lo.VisibleIndex = 9;
+            this.vx_lo.Width = 100;
             // 
             // DMBsy_Ten
             // 
@@ -727,17 +688,8 @@ namespace DataUseVaccine.Frm
             this.vx_lo2.Name = "vx_lo2";
             this.vx_lo2.OptionsColumn.ReadOnly = true;
             this.vx_lo2.Visible = true;
-            this.vx_lo2.VisibleIndex = 16;
+            this.vx_lo2.VisibleIndex = 17;
             this.vx_lo2.Width = 150;
-            // 
-            // vx_lo
-            // 
-            this.vx_lo.Caption = "Lô vx lần 1";
-            this.vx_lo.FieldName = "vx_lo";
-            this.vx_lo.Name = "vx_lo";
-            this.vx_lo.Visible = true;
-            this.vx_lo.VisibleIndex = 9;
-            this.vx_lo.Width = 100;
             // 
             // DMBsy_Ten2
             // 
@@ -757,6 +709,67 @@ namespace DataUseVaccine.Frm
             this.TimeTiem2.Visible = true;
             this.TimeTiem2.VisibleIndex = 15;
             this.TimeTiem2.Width = 150;
+            // 
+            // buttonActions
+            // 
+            this.buttonActions.AutoHeight = false;
+            this.buttonActions.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonActions.Name = "buttonActions";
+            this.buttonActions.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // ButtonEmail
+            // 
+            this.ButtonEmail.AutoHeight = false;
+            this.ButtonEmail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.SpinRight)});
+            this.ButtonEmail.Name = "ButtonEmail";
+            this.ButtonEmail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // repositoryItemCheckEdit9
+            // 
+            this.repositoryItemCheckEdit9.AutoHeight = false;
+            this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 12;
+            // 
+            // gridView3
+            // 
+            this.gridView3.Name = "gridView3";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Group";
+            this.gridColumn3.ColumnEdit = this.repositoryItemCheckEdit5;
+            this.gridColumn3.FieldName = "inv_group";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.Width = 44;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Group";
+            this.gridColumn10.ColumnEdit = this.repositoryItemCheckEdit5;
+            this.gridColumn10.FieldName = "inv_group";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 0;
+            this.gridColumn10.Width = 44;
+            // 
+            // trang_thai
+            // 
+            this.trang_thai.Caption = "Trạng thái";
+            this.trang_thai.FieldName = "trang_thai";
+            this.trang_thai.Name = "trang_thai";
+            this.trang_thai.OptionsColumn.ReadOnly = true;
+            this.trang_thai.Visible = true;
+            this.trang_thai.VisibleIndex = 16;
+            this.trang_thai.Width = 150;
             // 
             // GridContent
             // 
@@ -822,5 +835,6 @@ namespace DataUseVaccine.Frm
         private DevExpress.XtraGrid.Columns.GridColumn vx_lo;
         private DevExpress.XtraGrid.Columns.GridColumn DMBsy_Ten2;
         private DevExpress.XtraGrid.Columns.GridColumn TimeTiem2;
+        private DevExpress.XtraGrid.Columns.GridColumn trang_thai;
     }
 }

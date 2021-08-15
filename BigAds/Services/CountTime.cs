@@ -21,7 +21,7 @@ namespace DataUseVaccine.Services
         }
         public ResultObject delContent(string id)
         {
-            ResultObject resultDelete = new ResultObject
+            ResultObject result = new ResultObject
             {
                 IsResult = true
             };
@@ -38,6 +38,7 @@ namespace DataUseVaccine.Services
                 DateTime TiemLan1;
                 DateTime TimeHienTai = DateTime.Now;
                 var maVx = "";
+                bool b;
 
                 DataTable FindMaVx = new DataTable();
                 var QrTimeTiem = $"select vx_ma, TimeTiem1 from TrangChu where TrangChu_id = '{id}'";
@@ -50,56 +51,38 @@ namespace DataUseVaccine.Services
                     {
                         maVx = item["vx_ma"].ToString();
                         TiemLan1 = DateTime.Parse(item["TimeTiem1"].ToString());
-                        
-                    }
-                    
-                    DataTable check = new DataTable();
-                    var FindTime = $"select tgTiem from VacXin where vx_ma = N'{maVx}'";
-                    SqlDataAdapter checkFind = new SqlDataAdapter(FindTime, _conn);
-                    checkFind.Fill(check); 
-                    if(check.Rows.Count > 0)
-                    {
-                        foreach (DataRow item in FindMaVx.Rows)
+                        DataTable check = new DataTable();
+                        var FindTime = $"select tgTiem from VacXin where vx_ma = N'{maVx}'";
+                        SqlDataAdapter checkFind = new SqlDataAdapter(FindTime, _conn);
+                        checkFind.Fill(check);
+                        if (check.Rows.Count > 0)
                         {
-                            
-                            ThoiGianCheck = int.Parse(item["tgTiem"].ToString());
-                            
+                            foreach (DataRow item2 in check.Rows)
+                            {
+
+                                ThoiGianCheck = int.Parse(item2["tgTiem"].ToString());
+                                b = TimeHienTai == TiemLan1.AddDays(ThoiGianCheck);
+                                if (b != true)
+                                {
+                                    result.Message = "Chưa tới thời điểm tiêm mũi tiếp theo. Vui lòng kiểm tra khai báo trong danh mục Vắc xin";
+                                    result.IsResult = false;
+                                } else
+                                {
+                                    result.IsResult = true;
+                                }
+                            }
                         }
                     }
-                    
                 }
-                //if (TimeHienTai == Time1.AddDays(ThoiGianCheck))
-                //{
-
-                //}
-
-
-
-                //    DataTable checkVx = new DataTable();
-                //var QrTimeTiem = $"select userAdd from Content where id = '{id}'";
-                //SqlDataAdapter checkCn = new SqlDataAdapter(QrTimeTiem, _conn);
-                //checkCn.Fill(checkVx);
-                //if (checkVx.Rows.Count > 0)
-                //{
-                //    foreach (DataRow itemU in checkVx.Rows)
-                //    {
-                //        TimeTiem = itemU["userAdd"].ToString();
-                //    }
-                //    if (Properties.Settings.Default.UserLogin != TimeTiem && (Properties.Settings.Default.permission.Contains("1") || Properties.Settings.Default.permission.Contains("2")))
-                //    {
-                //        resultDelete.Message = "Bạn không có quyền xóa Content của người khác";
-                //        resultDelete.IsResult = false;
-                //    }
-                //}
-
+               
                 _conn.Close();
             }
             catch (Exception ex)
             {
-                resultDelete.Message = "Bạn không có quyền xóa Content của người khác";
-                resultDelete.IsResult = false;
+                result.Message = "Chưa tới thời điểm tiêm mũi tiếp theo. Vui lòng kiểm tra khai báo trong danh mục Vắc xin";
+                result.IsResult = false;
             }
-            return resultDelete;
+            return result;
         }
     }
     public class ResultObject

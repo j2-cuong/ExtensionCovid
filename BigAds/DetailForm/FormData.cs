@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -68,10 +69,46 @@ namespace DataUseVaccine.FormDetail
             LoadBsy("");
             if (Properties.Settings.Default.Editmode.Contains("1"))
             {
-                txtTimeTiem1.Value = _time;
+                txtTimeTiem1.Text = _time.ToString();
             } else
             {
-                txtTimeTiem2.Value = _time;
+                txtTimeTiem2.Text = _time.ToString();
+                DataTable _data = LoadData.bindingTrangChu(idGrid);
+                foreach (DataRow item in _data.Rows)
+                {
+
+                    var a = 
+                    txtMaDT.Text = NullToString(item["DTuong_ma"].ToString());
+                    txtTenDT.Text = NullToString(item["DTuong_ten"].ToString());
+                    txtNamSinh.Text = item["DTuong_nsinh"].ToString();
+                    lblGioiTinh.Text = NullToString(item["DTuong_GTinh"].ToString());
+                    txtDvctac.Text = NullToString(item["DTuong_DVCtac"].ToString());
+                    txtdienthoai.Text = NullToString(item["DTuong_SDT"].ToString());
+                    txtCCCD.Text = NullToString(item["DTuong_CCCD"].ToString());
+                    txttheBH.Text = NullToString(item["DTuong_BHYT"].ToString());
+                    txtNhomUT.Text = NullToString(item["DTuong_MaNhom"].ToString());
+                    txtTinh.Text = NullToString(item["DTuong_Tinh"].ToString());
+                    txtCodeTinh.Text = NullToString(item["DTuong_TinhCode"].ToString());
+                    txtQuan.Text = NullToString(item["DTuong_Quan"].ToString());
+                    txtCodeQuan.Text = NullToString(item["DTuong_QuanCode"].ToString());
+                    txtXa.Text = NullToString(item["DTuong_Xa"].ToString());
+                    txtCodeXa.Text = NullToString(item["DTuong_XaCode"].ToString());
+                    txtDcChiTiet.Text = NullToString(item["DTuong_DCCtiet"].ToString());
+                    vx_Ma1.Text = NullToString(item["vx_ma"].ToString());
+                    vx_ten1.Text = NullToString(item["vx_ten"].ToString());
+                    vx_nsx1.Text = NullToString(item["vx_nsx"].ToString());
+                    vx_location1.Text = NullToString(item["vx_location"].ToString());
+                    vx_lo1.Text = NullToString(item["vx_lo"].ToString());
+                    txtTimeNhap1.Text = NullToString(item["vx_ngayNhap"].ToString());
+                    txttenBsy1.Text = NullToString(item["DMBsy_Ten"].ToString());
+                    txtDcBsy1.Text = NullToString(item["DMBsy_diaChi"].ToString());
+                    txtChuyenKhoa1.Text = NullToString(item["DMBsy_chuyenKhoa"].ToString());
+                    txtExp1.Text = NullToString(item["DMBsy_Exp"].ToString());
+                    txtPhone1.Text = NullToString(item["DMBsy_Phone"].ToString());
+                    txtbcap1.Text = NullToString(item["DMBsy_bangCap"].ToString());
+                    txtTimeTiem1.Text = NullToString(item["TimeTiem1"].ToString());
+                    
+                }
             }
         }
 
@@ -108,9 +145,18 @@ namespace DataUseVaccine.FormDetail
         }
         private void vx_ma2_TextChanged(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.Editmode.Contains("1"))
+            {
+                btnSave.Visible = false;
+                XtraMessageBox.Show("Tạo mới chỉ được khai báo mũi tiêm lần 1");
+            } else
+            {
+                btnSave.Visible = true;
+                var a = vx_ma2.Text.Trim();
+                LoadVx(a);
+            }
             // Load thông tin vắc xin form 2
-            var a = vx_ma2.Text.Trim();
-            LoadVx(a);
+            
         }
         private void txttenBsy1_TextChanged(object sender, EventArgs e)
         {
@@ -128,33 +174,52 @@ namespace DataUseVaccine.FormDetail
         {
             // Set thông tin Vắc xin form 1 khi click vào combobox 
             // Thay đổi theo thông tin click
-            ThongTinVx selectDv = gridView3.GetFocusedRow() as ThongTinVx;
-            if (selectDv != null)
+            if (Properties.Settings.Default.Editmode.Contains("2"))
             {
-                vx_Ma1.Text = NullToString(selectDv.vx_ma.Trim());
-                vx_ten1.Text = NullToString(selectDv.vx_ten.Trim());
-                vx_nsx1.Text = NullToString(selectDv.vx_nsx.Trim());
-                vx_location1.Text = NullToString(selectDv.vx_location.Trim());
-                vx_lo1.Text = NullToString(selectDv.vx_lo.Trim());
-                txtTimeNhap1.Text = selectDv.vx_ngayNhap.ToString();
-                
+                btnSave.Visible = false;
+                XtraMessageBox.Show("Tạo mới chỉ được khai báo mũi tiêm lần 1. Chức năng lưu dữ liệu đã bị tắt. Vui lòng thoát màn hình nhập để thao tác lại");
             }
+            else
+            {
+                ThongTinVx selectDv = gridView3.GetFocusedRow() as ThongTinVx;
+                if (selectDv != null)
+                {
+                    vx_Ma1.Text = NullToString(selectDv.vx_ma.Trim());
+                    vx_ten1.Text = NullToString(selectDv.vx_ten.Trim());
+                    vx_nsx1.Text = NullToString(selectDv.vx_nsx.Trim());
+                    vx_location1.Text = NullToString(selectDv.vx_location.Trim());
+                    vx_lo1.Text = NullToString(selectDv.vx_lo.Trim());
+                    txtTimeNhap1.Text = selectDv.vx_ngayNhap.ToString();
+
+                }
+            }
+            
         }
 
         private void searchLookUpEdit4_EditValueChanged(object sender, EventArgs e)
         {
             // Set thông tin Vắc xin form 2 khi click vào combobox 
             // Thay đổi theo thông tin click
-            ThongTinVx selectDv = gridView4.GetFocusedRow() as ThongTinVx;
-            if (selectDv != null)
+            if (Properties.Settings.Default.Editmode.Contains("1"))
             {
-                vx_ma2.Text = NullToString(selectDv.vx_ma.Trim());
-                vx_ten2.Text = NullToString(selectDv.vx_ten.Trim());
-                vx_nsx2.Text = NullToString(selectDv.vx_nsx.Trim());
-                vx_location2.Text = NullToString(selectDv.vx_location.Trim());
-                vx_lo2.Text = NullToString(selectDv.vx_lo.Trim());
-                txtTimeNhap2.Text = selectDv.vx_ngayNhap.ToString();
+                btnSave.Visible = false;
+                XtraMessageBox.Show("Tạo mới chỉ được khai báo mũi tiêm lần 1. Chức năng lưu dữ liệu đã bị tắt. Vui lòng thoát màn hình nhập để thao tác lại");
+            } 
+            else
+            {
+                btnSave.Visible = true;
+                ThongTinVx selectDv = gridView4.GetFocusedRow() as ThongTinVx;
+                if (selectDv != null)
+                {
+                    vx_ma2.Text = NullToString(selectDv.vx_ma.Trim());
+                    vx_ten2.Text = NullToString(selectDv.vx_ten.Trim());
+                    vx_nsx2.Text = NullToString(selectDv.vx_nsx.Trim());
+                    vx_location2.Text = NullToString(selectDv.vx_location.Trim());
+                    vx_lo2.Text = NullToString(selectDv.vx_lo.Trim());
+                    txtTimeNhap2.Text = selectDv.vx_ngayNhap.ToString();
+                }
             }
+            
         }
 
 
@@ -239,11 +304,11 @@ namespace DataUseVaccine.FormDetail
                         } else
                         {
 
-                            DateTime b = DateTime.Parse(txtTimeTiem1.Text);
 
+                            var b = txtTimeTiem1.Text.ToString();
 
                             var Qr = $"INSERT INTO dbo.TrangChu VALUES  ( N'{idGrid}','{txtMaDT.Text.Trim()}' , N'{txtTenDT.Text.Trim()}' , " +
-                                $"'{SaveTime}' , N'{lblGioiTinh.Text.Trim()}' ,N'{txtDvctac.Text.Trim()}' , " +
+                                $"'{txtNamSinh.Text.ToString()}' , N'{lblGioiTinh.Text.Trim()}' ,N'{txtDvctac.Text.Trim()}' , " +
                                 $"N'{txtdienthoai.Text.Trim()}' , N'{txtCCCD.Text.Trim()}' , N'{txttheBH.Text.Trim()}' , " +
                                 $"N'{txtNhomUT.Text.Trim()}' , N'{txtTinh.Text.Trim()}' , N'{txtCodeTinh.Text.Trim()}' , " +
                                 $"N'{txtQuan.Text.Trim()}' , N'{txtCodeQuan.Text.Trim()}' , N'{txtXa.Text.Trim()}' , " +
@@ -252,7 +317,7 @@ namespace DataUseVaccine.FormDetail
                                 $"'{txtTimeNhap1.Text.Trim()}' , 0 , N'{txttenBsy1.Text.Trim()}' , N'{txtDcBsy1.Text.Trim()}' ," +
                                 $"N'{txtChuyenKhoa1.Text.Trim()}' , N'{txtExp1.Text.Trim()}' ,N'{txtPhone1.Text.Trim()}' , " +
                                 $"N'{txtbcap1.Text.Trim()}' , N'' , N'' , N'' , N'' , N'' , N'' , 0 ,N'' ,N'' , N'' , N'' , N'' , " +
-                                $"N'' , '{b}' ,NULL ,GETDATE() , NULL )";
+                                $"N'' , '{txtTimeTiem1.Text}' ,N'' ,GETDATE() , NULL, N'Đã tiêm mũi 1' )";
                             SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
                             InsertSQL.ExecuteNonQuery();
                             XtraMessageBox.Show("Thêm mới thành công");
@@ -269,7 +334,26 @@ namespace DataUseVaccine.FormDetail
                 {
                     try
                     {
-
+                        var Qr = $"UPDATE dbo.TrangChu SET " +
+                            $"vx_ma2 =N'{vx_ma2.Text.Trim()}'," +
+                            $"vx_ten2 = N'{vx_ten2.Text.Trim()}'," +
+                            $"vx_nsx2 = N'{vx_nsx2.Text.Trim()}'," +
+                            $"vx_location2 = N'{vx_location2.Text.Trim()}'," +
+                            $"vx_lo2 = N'{vx_lo2.Text.Trim()}'," +
+                            $"vx_ngayNhap2 = N'{txtTimeNhap2.Text.Trim()}'," +
+                            $"DMBsy_Ten2 = N'{txttenBsy2.Text.Trim()}'," +
+                            $"DMBsy_diaChi2 = N'{txtDcBsy2.Text.Trim()}'," +
+                            $"DMBsy_chuyenKhoa2 = N'{txtChuyenKhoa2.Text.Trim()}'," +
+                            $"DMBsy_Exp2 = N'{txtExp2.Text.Trim()}'," +
+                            $"DMBsy_Phone2 = N'{txtPhone2.Text.Trim()}'," +
+                            $"DMBsy_bangCap2 = N'{txtbcap2.Text.Trim()}'," +
+                            $"TimeTiem2 = N'{txtTimeTiem2.Text.Trim()}'," +
+                            $"trang_thai = N'Đã tiêm mũi 2'" +
+                            $"where TrangChu_id = '{idGrid}'";
+                        SqlCommand InsertSQL = new SqlCommand(Qr, _conn);
+                        InsertSQL.ExecuteNonQuery();
+                        XtraMessageBox.Show("Tiêm lần 2 thành công");
+                        Close();
                     }
                     catch (Exception ev)
                     {
